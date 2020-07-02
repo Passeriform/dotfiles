@@ -1,0 +1,161 @@
+#!/bin/sh
+
+###################################################################
+###								###
+###	    ____ _____ ____ _       ____  _______  ______	###
+###	   / __ ) ___// __ \ |     / /  |/  / __ \/ ____/	###
+###	  / __  \__ \/ /_/ / | /| / / /|_/ / /_/ / /    	###
+###	 / /_/ /__/ / ____/| |/ |/ / /  / / _, _/ /___		###
+###	/_____/____/_/     |__/|__/_/  /_/_/ |_|\____/		###
+###								###
+###								###
+###################################################################
+
+export XDG_CURRENT_DESKTOP="bspwm"
+export EDITOR="nano"
+export BROWSER="Firefox"
+export ELECTRON_TRASH="thunar"
+export RUST_LOG=info
+
+###########################################################################
+###                                                                     ###
+###                             Launcher				###
+###                                                                     ###
+###########################################################################
+									#
+$HOME/.config/bspwm/autostart.sh					#
+                                                                        #
+###########################################################################
+###                                                                     ###
+###                             BSPWM Config				###
+###                                                                     ###
+###########################################################################
+                                                                        #
+bspc config border_width         	0				#
+bspc config window_gap           	10				#
+bspc config split_ratio          	0.50				#
+									#
+bspc config top_padding          	30				#
+bspc config bottom_padding       	5				#
+bspc config left_padding         	5				#
+bspc config right_padding        	5				#
+									#
+bspc config single_monocle       	false				#
+bspc config borderless_monocle		true				#
+bspc config gapless_monocle		false				#
+									#
+#bspc config click_to_focus      	true				#
+#bspc config focus_by_distance    	true				#
+bspc config focus_follows_pointer 	true				#
+#bspc config history_aware_focus  	true				#
+									#
+bspc config pointer_follows_monitor	true				#
+									#
+bspc config pointer_modifier		mod4				#
+bspc config pointer_action1		move				#
+bspc config pointer_action2		resize_side			#
+bspc config pointer_action3		resize_corner			#
+bspc config remove_disabled_monitors	true				#
+bspc config remove_unplugged_monitors	true				#
+bspc config merge_overlapping_monitors	true				#
+bspc config merge_overlapping_monitors	true				#
+                                                                        #
+###########################################################################
+###                                                                     ###
+###                             Colors					###
+###                                                                     ###
+###########################################################################
+                                                                        #
+. "${HOME}/.cache/wal/colors.sh"					#
+bspc config normal_border_color		"#383e5c"			#
+bspc config active_border_color		"#383e5c"			#
+bspc config focused_border_color	"$color4"			#
+bspc config presel_feedback_color	"$color4"			#
+                                                                        #
+###########################################################################
+###                                                                     ###
+###                             Monitor Setup				###
+###                                                                     ###
+###########################################################################
+									#
+## Single monitor							#
+#bspc monitor -d 1 2 3 4 5 6 7 8 9 10					#
+#bspc monitor -d          					#
+bspc monitor -d Terms Web Code Design Music Social Logs Files Settings Mirror	#
+									#
+## Dual monitor								#
+#bspc monitor eDP1 -d Terms Code Logs Settings Mirror			#
+#bspc monitor HDMI1 -d Web Design Music Social Files			#
+									#
+#bspc monitor HDMI1 -d 1 2 3 4 5 6 7 8 9				#
+#bspc monitor eDP1 -d 10						#
+									#
+###########################################################################
+###                                                                     ###
+###                             Window Rules				###
+###                                                                     ###
+###########################################################################
+##                                                              ##
+##                      Fullscreen				##
+##                                                              ##
+##################################################################
+                                                                #
+bspc rule -a Gimp desktop=^4 state=fullscreen follow=on		#
+                                                                #
+##################################################################
+##                                                              ##
+##			Floating				##
+##                                                              ##
+##################################################################
+                                                                #
+#bspc rule -a mpv desktop=^5 state=floating follow=on		#
+                                                                #
+##################################################################
+##                                                              ##
+##			Tiled					##
+##                                                              ##
+##################################################################
+                                                                #
+bspc rule -a TermBoard desktop=^1 follow=on			#
+								#
+bspc rule -a firefox split_ratio=0.25 desktop=^2 follow=on	#
+bspc rule -a Notes split_ratio=0.75 desktop=^2 follow=on	#
+								#
+bspc rule -a Atom split_ratio=0.30 desktop=^3 follow=on		#
+bspc rule -a AtomTerm split_ratio=0.70 desktop=^3 follow=on	#
+								#
+bspc rule -a Spotify split_ratio=0.40 desktop=^5 follow=on	#
+bspc rule -a vlc desktop=^5  follow=on				#
+bspc rule -a NCMPCPP split_ratio=0.60 desktop=^5  follow=on	#
+								#
+bspc rule -a Steam split_ratio=0.50 desktop=^6 follow=on	#
+bspc rule -a discord split_ratio=0.50 desktop=^6 follow=on	#
+								#
+bspc rule -a SysInfo desktop=^7 follow=on			#
+								#
+bspc rule -a Gparted desktop=^8 follow=on			#
+bspc rule -a Thunar desktop=^8 follow=on			#
+                                                                #
+bspc rule -a Pavucontrol desktop=^9 follow=on			#
+                                                                #
+##########################################################################
+##									##
+##			Full-Screen Polybar Fix				##
+##									##
+##########################################################################
+									#
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-chirpy-top_HDMI1)	#
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-chirpy-top_eDP1)	#
+									#
+##########################################################################
+##									##
+##			External Rules					##
+##									##
+#########################################################################################
+											#
+##Pseudo automatic mode: always splits focused window when opening new window		#
+#bspc config external_rules_command $HOME/.config/bspwm/scripts/pseudo_automatic_mode	#
+##Adjust new window: splits biggest windows to keep windows about the same size		#
+#bspc config external_rules_command $HOME/.config/bspwm/scripts/adjust-new-window	#
+											#
+#########################################################################################

@@ -1,0 +1,10 @@
+[Default Applications]
+application/pdf=FoxitReader.desktop
+application/ppdf=FoxitReader.desktop
+video/mp4=mpv.desktop
+text/plain=sublime_text_3.desktop
+
+[Added Associations]
+text/css=sublime_text_3.desktop;
+application/x-shellscript=sublime_text_3.desktop;
+text/plain=sublime_text_3.desktop;

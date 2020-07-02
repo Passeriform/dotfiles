@@ -1,0 +1,132 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Global WM Settings
+
+[section/base]
+include-file = $HOME/.config/polybar/colors.conf
+include-file = $HOME/.config/polybar/settings.conf
+include-file = $HOME/.config/polybar/modules.conf
+include-file = $HOME/.config/polybar/chirpy-config
+
+[bar/chirpy-top]
+; Use either of the following command to list available outputs:
+; If unspecified, the application will pick the first one it finds.
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+
+monitor = ${env:MONITOR:}
+monitor-fallback = ${config.monitor-fallback}
+monitor-strict = ${config.monitor-strict}
+width = ${config.width}
+height = ${config.height}
+offset-x = ${config.offset-x}
+offset-y = ${config.offset-y}
+radius-top = ${config.radius-top}
+radius-bottom = ${config.radius-bottom}
+
+fixed-center = ${config.fixed-center}
+dpi = ${config.dpi}
+
+background = ${color.background}
+foreground = ${color.foreground}
+border-color = ${color.background}
+
+line-size = ${config.line-size}
+
+padding-right = 4
+
+override-redirect = ${config.override-redirect}
+
+module-margin = 2
+
+font-0 = "Comfortaa:style=Regular:pixelsize=10"
+font-1 = "FiraCode Nerd Font Mono:pixelsize=16"
+
+modules-left = ${config.top-left}
+modules-center = 
+modules-right = ${config.top-right}
+
+tray-offset-x = 0
+tray-offset-y = 0
+tray-position = none
+tray-padding = 0
+tray-detached = false
+tray-maxsize = 16
+
+;tray-transparent = false ; DISABLE ON TRY
+;tray-background = ${root.background} ; DISABLE ON TRY
+
+cursor-click = 
+cursor-scroll = 
+
+tray-scale = 1.0
+
+wm-restack = bspwm
+
+[bar/chirpy-bottom]
+monitor = ${env:MONITOR:}
+monitor-fallback = ${config.monitor-fallback}
+monitor-strict = ${config.monitor-strict}
+width = ${config.width}
+height = ${config.height}
+offset-x = ${config.offset-x}
+offset-y = ${config.offset-y}
+radius-top = ${config.radius-top}
+radius-bottom = ${config.radius-bottom}
+
+fixed-center = ${config.fixed-center}
+bottom = true
+dpi = ${config.dpi}
+
+background = ${color.background}
+foreground = ${color.foreground}
+border-color = ${color.background}
+
+padding = 0
+
+override-redirect = ${config.override-redirect}
+
+module-margin-left = 3
+module-margin-right = 3
+
+font-0 = "Comfortaa:style=Regular:pixelsize=10"
+font-1 = "FiraCode Nerd Font Mono:pixelsize=10"
+font-2 = FontAwesome5FreeSolid:pixelsize=12;1
+font-3 = FontAwesome5FreeRegular:pixelsize=12;1
+font-4 = "Font Awesome 5 Brands Regular:style=Regular:pixelsize=10;1"
+
+modules-left = ${config.bottom-left}
+modules-center = 
+modules-right = ${config.bottom-right}
+
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-detached = false
+tray-maxsize = 16
+
+;tray-transparent = false ; DISABLE ON TRY
+;tray-background = ${root.background} ; DISABLE ON TRY
+
+cursor-click = 
+cursor-scroll = 
+
+tray-scale = 1.0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;	    __________  ______
+;;	   / ____/ __ \/ ____/
+;;	  / __/ / / / / /_    
+;;	 / /___/ /_/ / __/    
+;;	/_____/\____/_/       
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
