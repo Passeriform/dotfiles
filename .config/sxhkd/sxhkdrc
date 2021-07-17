@@ -57,7 +57,7 @@ super + F11
 								#
 # Rofi								#
 super + F12
-	rofi -show run						#
+	rofi -show run -display-drun "❯" -show-icons		#
 								#
 ###########################################################################
 ###                                                                     ###
@@ -81,9 +81,9 @@ super + shift + f
 super + shift + t
     urxvt							#
 								#
-# Termite							#
+# Alacritty							#
 super + Return
-    termite							#
+    alacritty							#
 								#
 # Thunar File-Manager						#
 super + shift + Return
@@ -102,11 +102,11 @@ ctrl + shift + Escape
 								#
 # Rofi DRun							#
 super + r
-	rofi -show drun						#
+	rofi -show drun -display-drun "❯" -show-icons		#
 								#
 # Rofi DRun							#
 alt + r
-	rofi -show run						#
+	rofi -show run -display-drun "❯" -show-icons		#
 								#
 # Xkill								#
 super + Escape

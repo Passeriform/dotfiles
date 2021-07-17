@@ -1,4 +1,1 @@
-configuration {
-	modi: "window,drun,run,ssh";
-	theme: "~/.cache/wal/colors-rofi-dark";
-}
+@theme "~/.cache/wal/colors-rofi-dark.rasi"

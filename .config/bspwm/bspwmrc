@@ -11,10 +11,11 @@
 ###								###
 ###################################################################
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CURRENT_DESKTOP="bspwm"
 export EDITOR="nano"
 export BROWSER="Firefox"
-export ELECTRON_TRASH="thunar"
+export ELECTRON_TRASH="gio"
 export RUST_LOG=info
 
 ###########################################################################
@@ -35,7 +36,7 @@ bspc config border_width         	0				#
 bspc config window_gap           	10				#
 bspc config split_ratio          	0.50				#
 									#
-bspc config top_padding          	30				#
+bspc config top_padding          	35				#
 bspc config bottom_padding       	5				#
 bspc config left_padding         	5				#
 bspc config right_padding        	5				#
@@ -101,6 +102,9 @@ bspc monitor -d Terms Web Code Design Music Social Logs Files Settings Mirror	#
 ##################################################################
                                                                 #
 bspc rule -a Gimp desktop=^4 state=fullscreen follow=on		#
+bspc rule -a gimp desktop=^4 state=fullscreen follow=on		#
+bspc rule -a Gimp-2.10 desktop=^4 state=fullscreen follow=on    #
+bspc rule -a gimp-2.10 desktop=^4 state=fullscreen follow=on    #
                                                                 #
 ##################################################################
 ##                                                              ##
@@ -108,7 +112,6 @@ bspc rule -a Gimp desktop=^4 state=fullscreen follow=on		#
 ##                                                              ##
 ##################################################################
                                                                 #
-#bspc rule -a mpv desktop=^5 state=floating follow=on		#
                                                                 #
 ##################################################################
 ##                                                              ##
@@ -118,20 +121,20 @@ bspc rule -a Gimp desktop=^4 state=fullscreen follow=on		#
                                                                 #
 bspc rule -a TermBoard desktop=^1 follow=on			#
 								#
-bspc rule -a firefox split_ratio=0.25 desktop=^2 follow=on	#
 bspc rule -a Notes split_ratio=0.75 desktop=^2 follow=on	#
 								#
 bspc rule -a Atom split_ratio=0.30 desktop=^3 follow=on		#
-bspc rule -a AtomTerm split_ratio=0.70 desktop=^3 follow=on	#
 								#
 bspc rule -a Spotify split_ratio=0.40 desktop=^5 follow=on	#
-bspc rule -a vlc desktop=^5  follow=on				#
-bspc rule -a NCMPCPP split_ratio=0.60 desktop=^5  follow=on	#
+bspc rule -a spotify split_ratio=0.40 desktop=^5 follow=on	#
+bspc rule -a vlc desktop=^5 follow=on				#
+bspc rule -a NCMPCPP split_ratio=0.20 desktop=^5 follow=on	#
 								#
 bspc rule -a Steam split_ratio=0.50 desktop=^6 follow=on	#
 bspc rule -a discord split_ratio=0.50 desktop=^6 follow=on	#
 								#
 bspc rule -a SysInfo desktop=^7 follow=on			#
+bspc rule -a Variety desktop=^7 follow=on			#
 								#
 bspc rule -a Gparted desktop=^8 follow=on			#
 bspc rule -a Thunar desktop=^8 follow=on			#

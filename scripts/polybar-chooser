@@ -7,7 +7,9 @@ theme_dir=$HOME/.config/polybar.$theme
 polybar_dir=$HOME/.config/polybar
 
 if [[ -d "$theme_dir" ]]; then
-	rm -r $polybar_dir
-	cp -r $theme_dir $polybar_dir
+	if [[ -d "$polybar_dir" ]]; then
+		rm -r $polybar_dir
+	fi
+	ln -s $theme_dir $polybar_dir
 fi
 

@@ -18,14 +18,16 @@ function run {
   fi
 }
 
+export SCRIPTS=$HOME/scripts
+
 ###########################################################################
 ###									###
 ###				Monitor Setup				###
 ###									###
 ###########################################################################
 									#
-#xrandr --output eDP1 --auto --output HDMI1 --off			#
-xrandr --output eDP1 --auto --output HDMI1 --auto --above eDP1		#
+xrandr --output eDP1 --auto --output HDMI1 --off			#
+#xrandr --output eDP1 --auto --output HDMI1 --auto --above eDP1		#
 									#
 ###########################################################################
 ###									###
@@ -68,7 +70,7 @@ run picom --config $HOME/.config/picom/picom.conf > picom.log &		#
 									#
 ## Variety Backgrounds							#
 run variety &								#
-run $HOME/scripts/wal-update.sh &					#
+run $SCRIPTS/wal-update &						#
 									#
 ## Conky								#
 #run conky -c $HOME/.config/conky/system-overview &			#
@@ -97,10 +99,14 @@ run dunst --config $HOME/.config/dunst/dunstrc &			#
 ##								##
 ##################################################################
 								#
-run termite --class=TermBoard &					#
-IGNOREFETCH=true run termite --class=TermBoard -e "$SHELL" &	#
-IGNOREFETCH=true run termite --class=TermBoard -e "$SHELL" &	#
-IGNOREFETCH=true run termite --class=TermBoard -e "$SHELL" &	#
+bspc rule -a Alacritty -o desktop=^1 state=tiled && 
+run alacritty -e "$SHELL" --hold &#
+
+bspc rule -a Alacritty -o desktop=^1 state=tiled && 
+IGNOREFETCH=true run alacritty -e "$SHELL" --hold &#
+
+bspc rule -a Alacritty -o desktop=^1 state=tiled && 
+IGNOREFETCH=true run alacritty -e "$SHELL" --hold &#
 								#
 ##################################################################
 ##								##
@@ -108,8 +114,9 @@ IGNOREFETCH=true run termite --class=TermBoard -e "$SHELL" &	#
 ##								##
 ##################################################################
 								#
+bspc rule -a firefox -o desktop=^2 state=tiled &&		#
 run firefox &							#
-IGNOREFETCH=true run termite --class=Notes -d "$HOME/Notes" --hold &		#
+IGNOREFETCH=true run alacritty --class=Notes --working-directory "$HOME/Notes" --hold &		#
 								#
 ##################################################################
 ##								##
@@ -118,7 +125,6 @@ IGNOREFETCH=true run termite --class=Notes -d "$HOME/Notes" --hold &		#
 ##################################################################
 								#
 run atom &							#
-IGNOREFETCH=true run termite --class=AtomTerm &			#
 								#
 ##################################################################
 ##								##
@@ -126,7 +132,6 @@ IGNOREFETCH=true run termite --class=AtomTerm &			#
 ##								##
 ##################################################################
 								#
-run gimp &							#
 								#
 ##################################################################
 ##								##
@@ -135,7 +140,6 @@ run gimp &							#
 ##################################################################
 								#
 run spotify &							#
-run termite --class=NCMPCPP -e ncmpcpp &			#
 								#
 ##################################################################
 ##								##
@@ -151,8 +155,6 @@ run discord &							#
 ##								##
 ##################################################################
 								#
-run urxvt -name SysInfo -e gtop &				#
-run urxvt -name SysInfo -e htop &				#
 								#
 ##################################################################
 ##								##
@@ -160,7 +162,6 @@ run urxvt -name SysInfo -e htop &				#
 ##								##
 ##################################################################
 								#
-run thunar &							#
 								#
 ##################################################################
 ##								##
@@ -169,13 +170,11 @@ run thunar &							#
 ##################################################################
 								#
 								#
-								#
 ##################################################################
 ##								##
 ##			Mirror					##
 ##								##
 ##################################################################
-								#
 								#
 								#
 #################################################################

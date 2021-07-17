@@ -1,0 +1,18 @@
+#!/bin/bash
+
+LAST_CHANGED_TIME=$HOME/.config/variety/.last_change_time
+
+inotifywait -q -m -e close_write $LAST_CHANGED_TIME |
+while read -r filename event; do
+	echo "Detected wallpaper change. Running pywal..."
+
+	curr_bg=`variety --get-wallpaper`
+	echo "Current: $curr_bg"
+
+	wal -i "$curr_bg"
+	echo "Generated palette."
+
+	echo "Fixing polybar."
+	xdo below -t $(xdo id -n root) $(xdo if -a polybar-chirpy-top_eDP1) 
+	# spicetify apply Run only if backround changes after long time
+done
