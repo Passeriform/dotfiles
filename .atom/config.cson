@@ -1,7 +1,15 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
   "atom-beautify":
     general:
       _analyticsUserId: "0cf41135-4fd5-4d4e-bedf-4e32cf3ff81e"
+    html:
+      end_with_newline: true
+      indent_inner_html: true
+      max_preserve_newlines: 1
+      wrap_line_length: 120
     jsx:
       beautify_on_save: true
     rust:
@@ -9,31 +17,80 @@
       rustfmt_path: "/home/utkarsh/.cargo/bin/rustfmt"
     sass: {}
     typescript:
-      default_beautifier: "Prettier"
+      beautify_on_save: true
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui": {}
+  "atom-python-virtualenv":
+    additionalVirtualEnvPaths: "%PROJECT_PATH/venv"
+  "atom-toolbar":
+    visible: false
+  "autocomplete-plus":
+    autoActivationDelay: 500
   "autocomplete-python":
+    pythonPaths: "$PROJECT/venv/bin/python"
+    showTooltips: true
     useKite: false
+    useSnippets: "required"
   core:
+    autoHideMenuBar: true
     disabledPackages: [
-      "linter"
-      "autocomplete-paths"
-      "ide-rust"
       "language-rust-bundled"
+      "linter-rust"
+      "ide-rust"
+      "kite"
+      "linter-mypy"
     ]
+    followSymlinks: false
     telemetryConsent: "limited"
+    titleBar: "hidden"
+  dart:
+    browserLocation: "/usr/bin/firefox"
+    sdkLocation: "/opt/dart-sdk"
   editor:
+    defaultFontSize: 12
     fontFamily: "FiraCode Nerd Font Mono"
-    fontSize: 11
+    fontSize: 12
+    showIndentGuide: true
   "exception-reporting":
     userId: "701bb428-7430-4877-aef5-9c7e912d0aeb"
+  kite:
+    showWelcomeNotificationOnStartup: false
+  linter:
+    disabledProviders: [
+      "TSLint"
+    ]
+  "linter-eslint":
+    autofix:
+      fixOnSave: true
+  "linter-htmlhint":
+    disableWhenNoHtmlhintConfig: false
+  "linter-mypy":
+    executablePath: "$PROJECT_PATH/venv/bin/python"
+  "linter-pycodestyle":
+    forcedConfig: "$PROJECT/setup.cfg"
   "linter-sass-lint": {}
   "linter-tslint":
     fixOnSave: true
     rulesDirectory: "/Development/MyProjects/Portfolio/tslint.json"
   "linter-ui-default":
     panelHeight: 150
+    showPanel: true
   minimap:
     plugins:
       pigments: true
       pigmentsDecorationsZIndex: 0
+  "one-dark-ui": {}
+  "prettier-atom":
+    formatOnSaveOptions: {}
+  "python-linters":
+    lintTrigger:
+      flake8: "LintOnFileSave"
+      pydocstyle: "LintOnFileSave"
+      pylint: "LintOnFileSave"
+    path:
+      pythonExecutable: "%PROJECT_PATH/venv/bin/python"
+  "status-bar": {}
+  "todo-show":
+    sortBy: "Type"
   welcome:
     showOnStartup: false

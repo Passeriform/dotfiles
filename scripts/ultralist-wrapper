@@ -1,3 +1,5 @@
+#!/bin/bash
+
 define_notes () {
 	TARGET=$1
 
@@ -27,5 +29,5 @@ define_notes () {
 		fi
 		cd - > /dev/null
 	}
-		
+
 }

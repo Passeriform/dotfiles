@@ -1,0 +1,156 @@
+#!/bin/bash
+
+usage () { echo "Usage: $0 [-b] [-z] [-f] [-o <output>]" 1>&2; exit 1; }
+
+heading () {
+	echo -e "\033[1m================== $1 ==================\033[0m"
+}
+
+subheading () {
+	echo -e "\033[1m------------------ $1 ------------------\033[0m"
+}
+
+result () {
+	echo -e "\n\033[1;4m$1\033[0m"
+}
+
+gethistfile () {
+	if [[ $1 == "bash" ]]; then
+		echo $(IGNOREFETCH=true /bin/bash --rcfile <(echo 'echo "$HISTFILE"; exit'))
+	elif [[ $1 == "zsh" ]]; then
+		echo $(IGNOREFETCH=true /bin/zsh -ic 'echo "$HISTFILE"')
+	elif [[ $1 == "ksh" ]]; then
+		echo $(IGNOREFETCH=true /bin/ksh -ic 'echo "$HISTFILE"')
+	elif [[ $1 == "fish" ]]; then
+		FISH_ID=$(IGNOREFETCH=true /bin/fish -ic 'echo "$FISH_HISTFILE"')
+		echo $(find "$HOME/.local/share/fish/${FISH_ID}_history*")
+	else
+		heading "Encountered error"
+		result "Unknown shell type $1"
+		exit 1
+	fi
+}
+
+getdefaulthistfile () {
+	if [[ $1 == "bash" ]]; then
+		echo "$HOME/.bash_history"
+	elif [[ $1 == "zsh" ]]; then
+		echo "$HOME/.histfile"
+	elif [[ $1 == "ksh" ]]; then
+		echo "$HOME/.sh_history"
+	elif [[ $1 == "fish" ]]; then
+		echo "$HOME/.local/share/fish/fish_history"
+	else
+		heading "Encountered error"
+		result "Unknown shell type $1"
+		exit 1
+	fi
+}
+
+archive () {
+	ACTIVE_SHELL=$1
+
+	heading "Archiving for $ACTIVE_SHELL shell"
+
+	subheading "Finding history file for $ACTIVE_SHELL"
+
+	HISTFILE=$(gethistfile $ACTIVE_SHELL)
+	DEFAULT_HISTFILE=$(getdefaulthistfile $ACTIVE_SHELL)
+
+	if [[ ! -f $HISTFILE ]]; then
+		result "Coudn't find history file at $HISTFILE. Defaulting to $DEFAULT_HISTFILE"
+		HISTFILE=$DEFAULT_HISTFILE
+	fi
+
+	subheading "Removing ignore patterns"
+
+	echo -e "\033[1mPatterns:\033[0m"
+	printf '%s\n' "${IGNORE_PATTERNS[@]}"
+
+	OUTPUT_FILE="$OUTPUT_PATH/$(basename $HISTFILE)"
+
+	sed -r "/$COMBINED_PATTERN/d" $HISTFILE > "$OUTPUT_FILE"
+
+	result "Ignored patterns removed"
+
+	subheading "Removing duplicate entries"
+
+	/usr/bin/cat -n "$OUTPUT_FILE" | sort -k2 -k1n  | uniq -f1 | sort -nk1,1 | cut -f2- > "$OUTPUT_FILE"
+
+	result "Duplicate entries removed"
+}
+
+declare -a SHELLS=()
+declare ALL_SHELLS=true
+
+while getopts "bkzfo:" arg; do
+	case $arg in
+		b)
+			SHELLS+=("bash")
+			ALL_SHELLS=false
+			;;
+		k)
+			SHELLS+=("ksh")
+			ALL_SHELLS=false
+			;;
+		z)
+			SHELLS+=("zsh")
+			ALL_SHELLS=false
+			;;
+		f)
+			SHELLS+=("fish")
+			ALL_SHELLS=false
+			;;
+		o)
+			OUTPUT_PATH=$(readlink -f $OPTARG)
+			;;
+		*)
+			usage
+			;;
+	esac
+done
+
+if [ "$ALL_SHELLS" == true ]; then
+	if [[ -f $(getdefaulthistfile "bash") ]]; then
+		SHELLS+=("bash")
+	elif [[ -f $(getdefaulthistfile "ksh") ]]; then
+		SHELLS+=("ksh")
+	elif [[ -f $(getdefaulthistfile "zsh") ]]; then
+		SHELLS+=("zsh")
+	elif [[ -f $(getdefaulthistfile "fish") ]]; then
+		SHELLS+=("fish")
+	fi
+fi
+
+if [ -z "$OUTPUT_PATH" ]; then
+	STDOUT=true
+fi
+
+heading "History Archival"
+
+if [[ -z $STDOUT ]]; then
+	result "Chosen output"
+	echo "$OUTPUT_PATH"
+else
+	result "Piping to stdout"
+fi
+
+IGNORE_PATTERNS=(
+	'^l(|s|l)$'                         # ls aliases
+	'^cd(|\s*)(|\.|\.\.|-|\/)$'         # cd aliases
+	'^s(|tart)x$'                       # startx aliases
+	'^(|sudo\s*)pacman\s*-S(|yy)(|u)$'  # pacman -Syyu (without args)
+	'^reboot$'                          # reboot commands
+	'^xprop$'                           # xprop commands
+	'^c(ls|lear)$'                      # clear screen commands
+)
+printf -v COMBINED_PATTERN '(%s)|' "${IGNORE_PATTERNS[@]}"
+COMBINED_PATTERN=${COMBINED_PATTERN:0:-1}
+
+for shell in ${SHELLS[@]}; do
+	archive $shell
+done
+
+heading "Wrapping up"
+
+result "Job done. Find your archive at $OUTPUT_PATH"

@@ -1,169 +1,180 @@
-Built-in Atom Packages
-├── atom-dark-syntax@0.29.1
-├── atom-dark-ui@0.53.3
-├── atom-light-syntax@0.29.1
-├── atom-light-ui@0.46.3
-├── base16-tomorrow-dark-theme@1.6.0
-├── base16-tomorrow-light-theme@1.6.0
-├── one-dark-ui@1.12.5
-├── one-light-ui@1.12.5
-├── one-dark-syntax@1.8.4
-├── one-light-syntax@1.8.4
-├── solarized-dark-syntax@1.3.0
-├── solarized-light-syntax@1.3.0
-├── about@1.9.1
-├── archive-view@0.65.2
-├── autocomplete-atom-api@0.10.7
-├── autocomplete-css@0.17.5
-├── autocomplete-html@0.8.8
-├── autocomplete-plus@2.42.3
-├── autocomplete-snippets@1.12.1
-├── autoflow@0.29.4
-├── autosave@0.24.6
-├── background-tips@0.28.0
-├── bookmarks@0.46.0
-├── bracket-matcher@0.91.2
-├── command-palette@0.43.5
-├── dalek@0.2.2
-├── deprecation-cop@0.56.9
-├── dev-live-reload@0.48.1
-├── encoding-selector@0.23.9
-├── exception-reporting@0.43.1
-├── find-and-replace@0.219.3
-├── fuzzy-finder@1.14.2
-├── github@0.34.2
-├── git-diff@1.3.9
-├── go-to-line@0.33.0
-├── grammar-selector@0.50.1
-├── image-view@0.64.0
-├── incompatible-packages@0.27.3
-├── keybinding-resolver@0.39.0
-├── line-ending-selector@0.7.7
-├── link@0.31.6
-├── markdown-preview@0.160.2
-├── metrics@1.8.1
-├── notifications@0.71.0
-├── open-on-github@1.3.2
-├── package-generator@1.3.0
-├── settings-view@0.261.4
-├── snippets@1.5.1
-├── spell-check@0.76.1
-├── status-bar@1.8.17
-├── styleguide@0.49.12
-├── symbols-view@0.118.4
-├── tabs@0.110.0
-├── timecop@0.36.2
-├── tree-view@0.228.0
-├── update-package-dependencies@0.13.1
-├── welcome@0.36.9
-├── whitespace@0.37.7
-├── wrap-guide@0.41.0
-├── language-c@0.60.19
-├── language-clojure@0.22.8
-├── language-coffee-script@0.50.0
-├── language-csharp@1.1.0
-├── language-css@0.44.4
-├── language-gfm@0.90.7
-├── language-git@0.19.1
-├── language-go@0.47.2
-├── language-html@0.53.1
-├── language-hyperlink@0.17.1
-├── language-java@0.31.5
-├── language-javascript@0.134.1
-├── language-json@1.0.5
-├── language-less@0.34.3
-├── language-make@0.23.0
-├── language-mustache@0.14.5
-├── language-objective-c@0.16.0
-├── language-perl@0.38.1
-├── language-php@0.44.4
-├── language-property-list@0.9.1
-├── language-python@0.53.4
-├── language-ruby@0.72.23
-├── language-ruby-on-rails@0.25.3
-├── language-rust-bundled@0.1.0 (disabled)
-├── language-sass@0.62.1
-├── language-shellscript@0.28.2
-├── language-source@0.9.0
-├── language-sql@0.25.10
-├── language-text@0.7.4
-├── language-todo@0.29.4
-├── language-toml@0.20.0
-├── language-typescript@0.6.2
-├── language-xml@0.35.3
-└── language-yaml@0.32.0
-
-Community Packages
-├── angular-snippets@8.0.2
-├── ask-stack@2.2.0
-├── atom-beautify@0.33.4
-├── atom-formatter-jsbeautify@1.1.2
-├── atom-ide-ui@0.13.0
-├── atom-liquid-snippets@0.3.0
-├── atom-npm@0.3.1
-├── atom-python-virtualenv@1.0.4
-├── auto-update-plus@0.5.8
-├── autoclose-html-plus@0.27.2
-├── autocomplete-paths@2.12.2 (disabled)
-├── autocomplete-python@1.16.0
-├── busy-signal@2.0.1
-├── code-peek@1.4.21
-├── css-declaration-sorter@2.0.0
-├── docblockr@0.13.7
-├── expose@0.15.0
-├── file-icons@2.1.41
-├── git-blame@1.8.0
-├── git-plus@8.7.1
-├── git-time-machine@2.1.0
-├── highlight-selected@0.17.0
-├── ide-rust@0.22.0-beta.3 (disabled)
-├── ide-vue@0.1.9
-├── intentions@1.1.5
-├── jekyll@2.1.0
-├── language-babel@2.85.0
-├── language-docker@1.1.8
-├── language-javascript-jsx@0.3.7
-├── language-liquid@0.7.0
-├── language-rust@0.4.12
-├── language-solidity@0.1.1
-├── language-typescript-react@0.1.1
-├── lint@0.0.1
-├── linter@2.3.1 (disabled)
-├── linter-clang@4.1.2
-├── linter-docker@0.3.2
-├── linter-eslint@8.5.5
-├── linter-flake8@2.4.0
-├── linter-gcc@0.9.0
-├── linter-json-lint@0.1.3
-├── linter-latex@1.0.0
-├── linter-markdown@5.2.11
-├── linter-mypy@2.6.10
-├── linter-perl-lint@0.1.2
-├── linter-pycodestyle@2.1.3
-├── linter-pydocstyle@0.4.7
-├── linter-ruby-lint@1.2.0
-├── linter-rust@1.0.1
-├── linter-sass-lint@1.9.0
-├── linter-scss-lint@3.2.1
-├── linter-solidity@0.5.0
-├── linter-solium@0.0.5
-├── linter-tslint@1.10.43
-├── linter-ui-default@1.8.1
-├── linter-yaml@1.1.0
-├── merge-conflicts@1.4.5
-├── minimap@4.29.9
-├── minimap-pigments@0.2.2
-├── pane-layout-plus@0.7.4
-├── pigments@0.40.2
-├── prettier-atom@0.60.1
-├── python-docstring@0.0.3
-├── python-linters@0.0.4
-├── rustfmt@0.1.3
-├── script@3.26.0
-├── sort-selected-elements@0.1.0
-├── stash-tabs@0.1.0
-├── task-list@0.7.0
-├── tasks@2.10.1
-├── teletype@0.13.4
-├── todo-show@2.3.2
-└── toggle-markdown-task@0.7.0
+atom-dark-syntax
+atom-dark-ui
+atom-light-syntax
+atom-light-ui
+base16-tomorrow-dark-theme
+base16-tomorrow-light-theme
+one-dark-ui
+one-light-ui
+one-dark-syntax
+one-light-syntax
+solarized-dark-syntax
+solarized-light-syntax
+about
+archive-view
+autocomplete-atom-api
+autocomplete-css
+autocomplete-html
+autocomplete-plus
+autocomplete-snippets
+autoflow
+autosave
+background-tips
+bookmarks
+bracket-matcher
+command-palette
+dalek
+deprecation-cop
+dev-live-reload
+encoding-selector
+exception-reporting
+find-and-replace
+fuzzy-finder
+github
+git-diff
+go-to-line
+grammar-selector
+image-view
+incompatible-packages
+keybinding-resolver
+line-ending-selector
+link
+markdown-preview
+metrics
+notifications
+open-on-github
+package-generator
+settings-view
+snippets
+spell-check
+status-bar
+styleguide
+symbols-view
+tabs
+timecop
+tree-view
+update-package-dependencies
+welcome
+whitespace
+wrap-guide
+language-c
+language-clojure
+language-coffee-script
+language-csharp
+language-css
+language-gfm
+language-git
+language-go
+language-html
+language-hyperlink
+language-java
+language-javascript
+language-json
+language-less
+language-make
+language-mustache
+language-objective-c
+language-perl
+language-php
+language-property-list
+language-python
+language-ruby
+language-ruby-on-rails
+language-rust-bundled
+language-sass
+language-shellscript
+language-source
+language-sql
+language-text
+language-todo
+language-toml
+language-typescript
+language-xml
+language-yaml
+TerminalColor
+angular-snippets
+ask-stack
+atom-beautify
+atom-dart-snippets
+atom-formatter-jsbeautify
+atom-ide-ui
+atom-liquid-snippets
+atom-npm
+atom-python-virtualenv
+atom-toolbar
+auto-update-plus
+autoclose-html-plus
+autocomplete-paths
+autocomplete-python
+busy-signal
+code-peek
+css-declaration-sorter
+dart
+docblockr
+expose
+file-icons
+git-blame
+git-plus
+git-time-machine
+highlight-selected
+ide-bash
+ide-rust
+ide-vue
+intentions
+jekyll
+kite
+language-babel
+language-docker
+language-ini
+language-javascript-jsx
+language-liquid
+language-rust
+language-solidity
+language-tex
+language-typescript-react
+lint
+linter
+linter-clang
+linter-docker
+linter-eslint
+linter-flake8
+linter-gcc
+linter-htmlhint
+linter-json-lint
+linter-latex
+linter-markdown
+linter-mypy
+linter-perl-lint
+linter-pycodestyle
+linter-pydocstyle
+linter-rst
+linter-ruby-lint
+linter-rust
+linter-sass-lint
+linter-scss-lint
+linter-solidity
+linter-solium
+linter-tslint
+linter-ui-default
+linter-yaml
+merge-conflicts
+minimap
+minimap-pigments
+multi-cursor
+pane-layout-plus
+pigments
+prettier-atom
+python-docstring
+python-import-magic
+python-linters
+rustfmt
+script
+sort-selected-elements
+stash-tabs
+task-list
+tasks
+teletype
+terminal-tab
+todo-show
+toggle-markdown-task
+v-bootstrap4

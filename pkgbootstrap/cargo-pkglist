@@ -1,0 +1,14 @@
+cargo-add
+cargo-audit
+cargo-cache
+cargo-check
+cargo-count
+cargo-deadlinks
+cargo-deps
+cargo-expand
+cargo-hack
+cargo-makepkg
+cargo-outdated
+cargo-pkgbuild
+cargo-udeps
+ripgrep

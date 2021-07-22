@@ -1,28 +1,42 @@
-A File Icon
-All Autocomplete
-Andrew
-AndroidSnippets
+0_package_control_loader.sublime-package
+A File Icon.sublime-package
+All Autocomplete.sublime-package
+Andrew.sublime-package
+AndroidSnippets.sublime-package
 Autoprefixer
-ayu
+ayu.sublime-package
 Babel
-BracketHighlighter
-Can I Use
-DocBlockr
-GhostText
-Git
-Git blame
-GitGutter
-Gitignore
+backrefs
+BracketHighlighter.sublime-package
+Can I Use.sublime-package
+dateutil
+DocBlockr.sublime-package
+GhostText.sublime-package
+Git blame.sublime-package
+GitGutter.sublime-package
+Gitignore.sublime-package
+Git.sublime-package
+Installed Packages
+jsonschema
 LiveReload
-MarkdownPreview
-Package Control
-PlainNotes
+MarkdownPreview.sublime-package
+markupsafe
+mdpopups
+Package Control.sublime-package
+Packages
+PlainNotes.sublime-package
 PlainTasks
-Pretty JSON
-React and React Router Snippets
-Sass
-SideBarEnhancements
+Pretty JSON.sublime-package
+pygments
+pymdownx
+python-jinja2
+python-markdown
+pyyaml
+React and React Router Snippets.sublime-package
+Sass.sublime-package
+SideBarEnhancements.sublime-package
 SublimeCodeIntel
-SublimeLinter
+SublimeLinter.sublime-package
 SublimeREPL
+User
 zzz A File Icon zzz
