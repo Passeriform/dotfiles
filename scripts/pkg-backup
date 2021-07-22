@@ -27,4 +27,4 @@ cargo install --list | awk '/^\w/ { print $1 }' > "$BACKUP_DIR/cargo-pkglist"
 pip list | awk '{print $1}' | tail -n +3 > "$BACKUP_DIR/pip-pkglist"
 
 # sublime
-awk '{print $0}' <(find "$HOME/.config/sublime-text-3/Installed Packages/" -maxdepth 1 -exec basename {} \;) <(find "$HOME/.config/sublime-text-3/Packages/" -maxdepth 1 -exec basename {} \;) | sort -u > "$BACKUP_DIR/sublime-pkglist"
+awk '{print $0}' <(find "$HOME/.config/sublime-text-3/Installed Packages/" -maxdepth 1 -exec basename {} \; | tail -n +2) <(find "$HOME/.config/sublime-text-3/Packages/" -maxdepth 1 -exec basename {} \; | tail -n +2) | sort -u > "$BACKUP_DIR/sublime-pkglist"
