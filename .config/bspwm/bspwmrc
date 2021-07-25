@@ -11,13 +11,6 @@
 ###								###
 ###################################################################
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CURRENT_DESKTOP="bspwm"
-export EDITOR="nano"
-export BROWSER="Firefox"
-export ELECTRON_TRASH="gio"
-export RUST_LOG=info
-
 ###########################################################################
 ###                                                                     ###
 ###                             Launcher				###

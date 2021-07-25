@@ -2,30 +2,6 @@
 # ~/.bashrc
 #
 
-setup_path_vars () {
-	export SCRIPTS=$HOME/scripts
-
-	# Add android-sdk paths
-	export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-	export ANDROID_SDK_ROOT="/opt/android-sdk"
-	export PATH="/opt/android-sdk:$PATH"
-
-	# Add ruby local paths
-	export PATH="$HOME/.local/bin:$HOME/.gem/ruby/2.7.0/bin:$PATH"
-
-	# Add npm paths
-	export PATH="$HOME/.npm/bin:$PATH"
-
-	# Add flutter paths
-	export PATH="/opt/flutter/bin:$PATH"
-
-	# Add custom scripts path
-	export PATH="$HOME/scripts:$PATH"
-
-	# Path to the bash it configuration
-	export BASH_IT="/home/utkarsh/.bash_it"
-}
-
 setup_aliases () {
 	# CCZE colored logs
 	cat () {
@@ -34,7 +10,6 @@ setup_aliases () {
 
 	# Quick aliases
 	alias sx='startx'
-	alias subl='subl3'
 
 	alias bspwmconf='$EDITOR $HOME/.config/bspwm/bspwmrc'
 	alias bspwmauto='$EDITOR $HOME/.config/bspwm/autostart.sh'
@@ -47,6 +22,9 @@ setup_aliases () {
 }
 
 setup_bash_it () {
+	# Path to the bash it configuration
+	export BASH_IT="/home/utkarsh/.bash_it"
+
 	# Setting bash_it theme
 	if [ "$TERM" != "linux" ] && [ "$TERM" != "rxvt-256color" ]; then
 		# Set barbuk theme if unicode is supported and terminal is not primitive
@@ -73,7 +51,6 @@ setup_bash_it () {
 	source "$BASH_IT"/bash_it.sh
 }
 
-setup_path_vars
 setup_aliases
 setup_bash_it
 

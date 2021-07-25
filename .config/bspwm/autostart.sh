@@ -18,8 +18,6 @@ function run {
   fi
 }
 
-export SCRIPTS=$HOME/scripts
-
 ###########################################################################
 ###									###
 ###				Monitor Setup				###
@@ -99,14 +97,14 @@ run dunst --config $HOME/.config/dunst/dunstrc &			#
 ##								##
 ##################################################################
 								#
-bspc rule -a Alacritty -o desktop=^1 state=tiled && 
-run alacritty -e "$SHELL" --hold &#
-
-bspc rule -a Alacritty -o desktop=^1 state=tiled && 
-IGNOREFETCH=true run alacritty -e "$SHELL" --hold &#
-
-bspc rule -a Alacritty -o desktop=^1 state=tiled && 
-IGNOREFETCH=true run alacritty -e "$SHELL" --hold &#
+bspc rule -a Alacritty -o desktop=^1 state=tiled &&		#
+run alacritty -e "$SHELL" --hold &				#
+								#
+bspc rule -a Alacritty -o desktop=^1 state=tiled && 		#
+IGNOREFETCH=true run alacritty -e "$SHELL" --hold &		#
+								#
+bspc rule -a Alacritty -o desktop=^1 state=tiled &&		#
+IGNOREFETCH=true run alacritty -e "$SHELL" --hold &		#
 								#
 ##################################################################
 ##								##
