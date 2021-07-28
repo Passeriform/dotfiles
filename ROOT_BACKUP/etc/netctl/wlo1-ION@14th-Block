@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlo1
+Connection=wireless
+Security=none
+ESSID=ION@14th-Block
+IP=dhcp
+

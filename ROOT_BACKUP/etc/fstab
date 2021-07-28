@@ -1,0 +1,18 @@
+# /dev/sda6
+UUID=692ca919-6857-40e3-8fb3-8f55911c9e52	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda1 LABEL=SYSTEM
+UUID=7455-833C      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda10 LABEL=Development
+UUID=C6C4CBA8C4CB98D7	/Development	ntfs-3g      	rw,relatime,nosuid,nodev,uid=1000,gid=1000,allow_other,blksize=4096	0 0
+
+# /dev/sda11 LABEL=VM
+UUID=06CC1C42CC1C2F05	/VM       	ntfs-3g      	rw,relatime,nosuid,nodev,uid=1000,gid=1000,allow_other,blksize=4096	0 0
+
+# /dev/sda13 LABEL=Warehouse
+UUID=FCB2EE62B2EE20BE	/Warehouse	ntfs-3g      	rw,relatime,nosuid,nodev,uid=1000,gid=1000,allow_other,blksize=4096	0 0
+
+# /dev/sda8
+UUID=6f0acf18-5e2b-4152-a70b-e20f0c05d481	none      	swap      	defaults  	0 0
+
