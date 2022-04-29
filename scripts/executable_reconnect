@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Vigorously reconnects a network to the wireless interface
+
+INTERFACE="wlo1"
+NETWORK_PROFILE=$1
+
+echo "================= Stopping $NETWORK_PROFILE Profile ==================="
+
+sudo netctl stop-all
+sudo netctl stop $NETWORK_PROFILE
+
+echo "================= Throttling $INTERFACE Interface ==================="
+
+sudo ip link set $INTERFACE down
+sudo ip link set $INTERFACE up
+sudo ip link set $INTERFACE down
+
+echo "================= Throttling Profile and Reconnecting ==================="
+
+sudo netctl stop-all
+sudo netctl stop $NETWORK_PROFILE
+sudo netctl start $NETWORK_PROFILE
+
+echo "================= COMPLETE ==================="

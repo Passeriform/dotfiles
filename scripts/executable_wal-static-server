@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd "$HOME/.cache/wal" && python -m http.server 51234

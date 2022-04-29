@@ -1,0 +1,20 @@
+[Default Applications]
+application/json=nvim.desktop;
+application/javascript=nvim.desktop;
+application/pdf=FoxitReader.desktop;firefox.desktop;
+application/ppdf=FoxitReader.desktop;
+application/vnd.sqlite3=nvim.desktop;
+application/x-shellscript=nvim.desktop;
+image/jpeg=feh.desktop;gimp.desktop;
+image/png=feh.desktop;gimp.desktop;
+image/svg+xml=feh.desktop;gimp.desktop;
+text/css=nvim.desktop
+text/plain=nvim.desktop;
+text/x-csrc=nvim.desktop;
+text/x-tex=nvim.desktop;
+video/mp4=vlc.desktop;
+video/x-msvideo=vlc.desktop;
+x-scheme-handler/postman=Postman.desktop;
+x-scheme-handler/kite=kite-copilot.desktop;
+
+[Added Associations]

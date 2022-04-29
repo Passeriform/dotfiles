@@ -1,0 +1,125 @@
+/**
+ * @name Couve
+ * @author A user#8169, Nyria#3863
+ * @description A new look to discord
+ * @invite rtBQX5D3bD
+ * @version 2.1
+*/
+
+@import url("https://nyri4.github.io/Couve/betterdiscord/app.css");
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+
+/* Settings */
+:root {
+
+    /* Colors */
+    --main-color: var(--background-accent);
+
+    /* Borders */
+    --avatar-radius: 8px;
+
+		/* Horizontal server list */
+		--HSL-server-icon-size: 40px;  /* Size of the server icons | DEFAULT: 40px */
+		--HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
+		--HSL-server-direction: column; /* Direct of the server list. | Options: column, column-reverse | DEFAULT: column */
+}
+
+/* Background and border radius fix */
+.chat-2ZfjoI {
+		background: var(--background-secondary)
+}
+
+.content-1jQy2l {
+		background: var(--background-primary);
+		border-radius: 12px;
+		margin: 10px;
+}
+
+/* Fix theme nav margin offset */
+:root .guilds-2JjMmN {
+  margin-top: 0;
+}
+
+/* Fix theme public button offset */
+#bd-pub-li {
+	margin-top: 14px !important;
+	margin-bottom: 14px !important;
+}
+
+/* Fix avatar theme offset */
+:root .panels-3wFtMD > .container-YkUktl .avatarWrapper-1B9FTW[aria-expanded=false] {
+	position: unset;
+}
+
+/* Remove gradient layover */
+:root .form-3gdLxP:before {
+	background: none;
+}
+
+:root .layer-86YKbF:not(.baseLayer-W6S8cY) {
+		margin-left: 0;
+}
+
+.colorDefault-CDqZdO {
+	color: #a7a7a7;
+}
+
+[aria-label="Message Actions"] .colorDefault-CDqZdO {
+	color: var(--interactive-normal);
+}
+
+:root .notice-2HEN-u[id] {
+	margin: 0;
+}
+
+/* Dark/Light vars */
+.theme-dark {
+
+    /* BGs */
+    --background-primary: #252a3e;
+    --background-secondary: #1e2337;
+    --background-secondary-alt: #1c2438;
+    --background-secondary-alt-alt: #1b1d31;
+    --background-tertiary: #060c24;
+
+    --deprecated-store-bg: var(--background-primary);
+    --background-floating: var(--background-secondary);
+    --background-mobile-primary: var(--background-primary);
+    --activity-card-background: var(--background-secondary);
+
+    --colortransparency: #0003;
+
+    /* Cards */
+    --card: #212332;
+
+    /* Other stuff */
+    --textcolor: #fff;
+    --epicshadow1: #fff3;
+
+    /* Font */
+    --font-display: var(--font-primary) !important;
+}
+
+.theme-light {
+
+    /* BGs */
+    --background-primary: #fafafa;
+    --background-secondary: #f7f7f7;
+    --background-secondary-alt: #fff;
+    --background-secondary-alt-alt: #eee;
+    --background-tertiary: #fff;
+
+    --deprecated-store-bg: var(--background-primary);
+    --background-floating: var(--background-secondary);
+    --background-mobile-primary: var(--background-primary);
+    --activity-card-background: var(--background-secondary);
+
+    --colortransparency: #0001;
+
+    /* Cards */
+    --card: #aaaaaa;
+
+    /* Other stuff */
+    --textcolor: #000;
+    --epicshadow1: #0003;
+}

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Hot swaps polybar themes and restores them.
+
+theme=$1
+theme_dir=$HOME/.config/polybar.$theme
+polybar_dir=$HOME/.config/polybar
+
+if [[ -d "$theme_dir" ]]; then
+	if [[ -d "$polybar_dir" ]]; then
+		rm -r $polybar_dir
+	fi
+	ln -s $theme_dir $polybar_dir
+fi
+

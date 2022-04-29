@@ -1,0 +1,67 @@
+Xft.dpi:                        96
+Xft.antialias:			true
+Xft.rgba:			rgba
+Xft.hinting:			true
+Xft.hintstyle:			hintslight
+
+URxvt*termName:                 rxvt-256color
+URxvt.font:                     xft:FiraCode Nerd Font Mono:size=9,xfg:Font Awesome 5 Free:size=10,xft:Symbola:pixelsize=9,xft:PowerlineSymbols:pixelsize=9
+URxvt.saveLines:		65535
+URxvt.urgentOnBell:		true
+URxvt.scrollWithBuffer:		true
+URxvt.skipScroll:		false
+URxvt.scrollTtyKeypress:	true
+URxvt.secondaryScreen:		1
+URxvt.secondaryScroll:		0
+URxvt.secondaryWheel:		1
+
+URxvt.copyCommand:		xclip -i -selection clipboard
+URxvt.pasteCommand:		xclip -o -selection clipboard
+URxvt.letterSpace:              -1
+URxvt.cursorColor:              #191919
+URxvt.borderLess:		false
+URxvt.internalBorder:		30
+URxvt.externalBorder:		0
+URxvt.transparent:		false
+URxvt.fading:			20
+URxvt.faceColor:		rgba:0000/0000/0000/ffff
+URxvt.tintColor:		rgba:0000/0000/0000/0000
+URxvt.shading:			20
+URxvt.blendType:		alphablend
+URxvt.blurRadius:		2
+
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt*geometry:                 180x35
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+
+URxvt*colorIT:			#87af5f
+URxvt*colorBD:			#d7d7d7
+URxvt*colorUL:			#87afd7
+
+URxvt*keysym.M-Down:		\033[1;3B
+URxvt*keysym.M-Up:		\033[1;3A
+URxvt*keysym.M-Left:		\033[1;3D
+URxvt*keysym.M-Right:		\033[1;3C
+
+URxvt*keysym.Control-Down:	\033[1;5B
+URxvt*keysym.Control-Up:	\033[1;5A
+URxvt*keysym.Control-Left:	\033[1;5D
+URxvt*keysym.Control-Right:	\033[1;5C
+
+URxvt.keysym.M-c:		perl:clipboard:copy
+URxvt.keysym.M-v:		perl:clipboard:paste
+
+URxvt.perl-ext-common:          default,matcher,font-size,url-select,clipboard
+URxvt.urlLauncher:		usr/bin/firefox
+URxvt.matcher.button:		C1
+URxvt.keysym.Control-0x2b:	perl:font-size:increase
+URxvt.keysym.Control-0x2d:	perl:font-size:decrease
+URxvt.url-select.launcher:	firefox
+URxvt.url-select.underline:	true
+URxvt.clipboard.autocopy:       true
+URxvt.selection.pattern-0:	\\|([^|]+)\\|

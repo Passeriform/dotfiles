@@ -1,0 +1,31 @@
+#!/bin/bash
+
+LAST_CHANGED_TIME=${HOME}/.config/variety/.last_change_time
+
+inotifywait -q -m -e close_write $LAST_CHANGED_TIME |
+while read -r filename event; do
+	echo "Detected wallpaper change. Running pywal..."
+
+	curr_bg=`variety --get-wallpaper`
+	echo "Current: $curr_bg"
+
+	wal -i "$curr_bg"
+	echo "Generated palette."
+
+	echo "Fixing polybar."
+	xdo below -t $(xdo id -n root) $(xdo if -a polybar-chirpy-top_eDP1)
+
+	echo "Update firefox colors"
+	pywalfox update
+
+	echo "Forcing spotify update."
+	spicetify apply --no-restart
+	echo '{ "reload": "now", "date": "'$(date)'" }' > /opt/spotify/Apps/xpui/reload.json
+
+	echo "Forcing discord custom wal colors"
+	cat "${HOME}/.cache/wal/colors-discord.css" > "${HOME}/.config/BetterDiscord/data/stable/custom.css"
+
+	echo "Restarting XOB"
+	killall -USR1 xob
+	bash "${HOME}/.config/xob/launch.sh"
+done

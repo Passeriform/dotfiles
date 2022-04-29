@@ -1,0 +1,54 @@
+#!/bin/bash
+
+declare -a cmds
+
+LAST_CHANGED_TIME=${HOME}/.config/variety/.last_change_time
+
+generatePallette() {
+	echo "Detected wallpaper change. Running pywal..."
+	curr_bg=`variety --get-wallpaper`
+	echo "Current: $curr_bg"
+
+	wal -i "$curr_bg"
+	echo "Generated palette."
+}
+
+updatePolybar() {
+	echo "Updating polybar."
+	xdo below -t $(xdo id -n root) $(xdo if -a polybar)
+}
+
+updateFirefox() {
+	echo "Update firefox colors"
+	pywalfox update
+}
+
+updateSpotify() {
+	echo "Forcing spotify update."
+	spicetify apply --no-restart
+	echo '{ "reload": "now", "date": "'$(date)'" }' > /opt/spotify/Apps/xpui/reload.json
+}
+
+updateDiscord() {
+	echo "Forcing discord custom wal colors"
+	cat "${HOME}/.cache/wal/colors-discord.css" > "${HOME}/.config/BetterDiscord/data/stable/custom.css"
+}
+
+updateXOB() {
+	echo "Restarting XOB"
+	killall -USR1 xob
+	bash "${HOME}/.config/xob/launch.sh"
+}
+
+export -f updatePolybar
+export -f updateFirefox
+export -f updateSpotify
+export -f updateDiscord
+export -f updateXOB
+cmds=(updatePolybar updateFirefox updateSpotify updateDiscord updateXOB)
+
+inotifywait -q -m -e close_write $LAST_CHANGED_TIME |
+while read -r filename event; do
+	generatePallette && \
+	parallel ::: "${cmds[@]}"
+done

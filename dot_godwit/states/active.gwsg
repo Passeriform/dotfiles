@@ -1,0 +1,30 @@
+{
+  "default": {
+    "glyph": "@passeriform/GodWit",
+    "directory": "/Development/MyProjects/GodWit/godwit",
+    "status": null
+  },
+  "active": {
+    "glyph": "@passeriform/GodWit",
+    "directory": "/Development/MyProjects/GodWit/godwit",
+    "status": null
+  },
+  "states": [
+    {
+      "glyph": "@passeriform/GodWit",
+      "directory": "/Development/MyProjects/GodWit/godwit",
+      "status": null
+    },
+    {
+      "glyph": "@passeriform/hOwl",
+      "directory": "/Development/MyProjects/hOwl/",
+      "status": null
+    },
+    {
+      "glyph": "@passeriform/BruhIM",
+      "directory": "/Development/MyProjects/BruhIM/",
+      "status": null
+    }
+  ],
+  "ignore": []
+}

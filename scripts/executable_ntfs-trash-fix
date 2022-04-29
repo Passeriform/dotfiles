@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Creates .Trash-1000 folder if it doesn't exist
+
+device=$1
+target=$(findmnt -S $device -n -o TARGET)
+
+if [ -d $target/.Trash-1000 ]; then
+	echo "================= Trash was already found ==================="
+else
+	echo "================= Trash was not found ==================="
+	mkdir $target/.Trash-1000
+	chown -R $USER:$USER $target/.Trash-1000/
+fi
+
+echo "================ Trash Fix Complete =================="

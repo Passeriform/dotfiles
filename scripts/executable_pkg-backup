@@ -1,0 +1,27 @@
+#! /bin/bash
+
+BACKUP_DIR=$1
+
+# pacman
+pacman -Qqe | grep -vx "$(pacman -Qi base | grep Depends | cut -d: -f2)" | grep -vx "$(pacman -Qqm)" > "$BACKUP_DIR/pacman-pkglist"
+
+# yay
+pacman -Qqm > "$BACKUP_DIR/yay-pkglist"
+
+# CPAN - Perl
+cpan -l | awk '{print $1}' > "$BACKUP_DIR/cpan-pkglist"
+
+# gem - Ruby
+gem list --no-versions > "$BACKUP_DIR/gem-pkglist"
+
+# npm - JS
+node ./npm-pkglist.js "$HOME/node_modules/" > "$BACKUP_DIR/npm-pkglist"
+
+# cargo - Rust
+cargo install --list | awk '/^\w/ { print $1 }' > "$BACKUP_DIR/cargo-pkglist"
+
+# pip - Python
+pip list | awk '{print $1}' | tail -n +3 > "$BACKUP_DIR/pip-pkglist"
+
+# sublime
+awk '{print $0}' <(find "$HOME/.config/sublime-text-3/Installed Packages/" -maxdepth 1 -exec basename {} \; | tail -n +2) <(find "$HOME/.config/sublime-text-3/Packages/" -maxdepth 1 -exec basename {} \; | tail -n +2) | sort -u > "$BACKUP_DIR/sublime-pkglist"

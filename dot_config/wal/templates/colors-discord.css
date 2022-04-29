@@ -1,0 +1,56 @@
+/* body {{
+	--background-primary: {color0} !important;
+	--background-secondary: {color4} !important;
+	--background-tertiary: {color5} !important;
+	--text-normal: {color15} !important;
+	--channels-default: {color15} !important;
+	--interactive-active: {color14} !important;
+}} */
+
+.theme-dark {{
+	--header-primary: {color15};
+  --header-secondary: {color7};
+  --text-normal: {color7};
+  --text-muted: {color7};
+  --text-link: {color12};
+	--channel-icon: {color0};
+  --channels-default: {color0};
+  --interactive-normal: {color0};
+  --interactive-hover: {color0};
+  --interactive-active: {color0};
+  --interactive-muted: {color0};
+  --background-primary: {color0};
+  --background-secondary: {color8};
+  --background-secondary-alt: {color8};
+  --background-tertiary: {color5};
+  --background-accent: {color0};
+  --background-floating: {color0};
+  --background-mobile-primary: {color0};
+  --background-mobile-secondary: {color8};
+  --background-modifier-hover: rgba(79,84,92,0.16);
+  --background-modifier-active: rgba(79,84,92,0.24);
+  --background-modifier-selected: rgba(79,84,92,0.32);
+  --background-modifier-accent: hsla(0,0%,100%,0.06);
+  --background-mentioned: rgba(250,166,26,0.05);
+  --background-mentioned-hover: rgba(250,166,26,0.08);
+  --background-message-hover: rgba(4,4,5,0.07);
+  --elevation-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+  --elevation-low: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+  --elevation-medium: 0 4px 4px rgba(0,0,0,0.16);
+  --elevation-high: 0 8px 16px rgba(0,0,0,0.24);
+  --logo-primary: #fff;
+  --guild-header-text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  --channeltextarea-background: {color8};
+  --activity-card-background: #ff0000;
+  --textbox-markdown-syntax: {color15};
+  --deprecated-card-bg: rgba(32,34,37,0.6);
+  --deprecated-card-editable-bg: rgba(32,34,37,0.3);
+  --deprecated-store-bg: #36393f;
+  --deprecated-quickswitcher-input-background: {color8};
+  --deprecated-quickswitcher-input-placeholder: {color7};
+  --deprecated-text-input-bg: rgba(0,0,0,0.1);
+  --deprecated-text-input-border: rgba(0,0,0,0.3);
+  --deprecated-text-input-border-hover: #040405;
+  --deprecated-text-input-border-disabled: #202225;
+  --deprecated-text-input-prefix: #dcddde;
+}}

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PROCESS_NAME=$(playerctl metadata | head -n 1 | cut -d ' ' -f 1)
+wmctrl -xa $PROCESS_NAME || $PROCESS_NAME

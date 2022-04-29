@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#                 _____                  __       __  __
+#     _________  / __(_)     ____  ___  / /______/ /_/ /
+#    / ___/ __ \/ /_/ /_____/ __ \/ _ \/ __/ ___/ __/ /
+#   / /  / /_/ / __/ /_____/ / / /  __/ /_/ /__/ /_/ /
+#  /_/   \____/_/ /_/     /_/ /_/\___/\__/\___/\__/_/
+#
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+choice=`find /etc/netctl -maxdepth 1 -type f -printf $'<span size="200%" rise="-2000">﬉</span>\t%f\n' | rofi -markup -markup-rows -dmenu -theme ${HOME}/.config/rofi/applet.rasi`;
+if [ -n "$choice" ]; then
+	PASSWORD=$(rofi -dmenu -password -theme "${HOME}/.config/rofi/password.rasi")
+	echo "$PASSWORD" | sudo -S netctl switch-to $(echo "$choice" | cut -d $'\t' -f 2)
+fi

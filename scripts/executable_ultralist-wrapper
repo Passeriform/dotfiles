@@ -1,0 +1,33 @@
+#!/bin/bash
+
+define_notes () {
+	TARGET=$1
+
+	if [[ -z $TARGET ]]; then
+		echo "Target not specified. Exiting."
+	fi
+
+	# Checking if target directory is already created
+	if [[ ! -d $TARGET ]]; then
+		mkdir $TARGET
+	fi
+
+	cd $TARGET
+
+	# If ultralist wasn't initialized, initialize now on target
+	if [[ 'ultralist add | grep "No todo file found!"' ]]; then
+		ultralist init > /dev/null
+		cd - > /dev/null
+	fi
+
+	note () {
+		cd $TARGET
+		if [[ $# -eq 0 ]]; then
+			ultralist list
+		else
+			ultralist $@
+		fi
+		cd - > /dev/null
+	}
+
+}

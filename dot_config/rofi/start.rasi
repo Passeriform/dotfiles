@@ -1,0 +1,27 @@
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+
+#window {
+	fullscreen: true;
+}
+
+#textbox-prompt-colon {
+	str: "﩯";
+}
+
+#listview {
+	lines: 5;
+	expand: false;
+}
+
+#entry {
+	expand: true;
+}
+
+#element {
+	margin: 5;
+	padding: 20;
+}
+
+#element-icon {
+	size: 56;
+}
