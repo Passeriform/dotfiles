@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Run `yay --save --makepkg ${SCRIPTS}/makepkg-prerun-wrapper` to load permanently
+
+if ! grep -s "## $0 ##" PKGBUILD >/dev/null && \
+   [[ -e "${HOME}/.customizepkg/$(basename $(pwd))" ]]; then
+  customizepkg --modify >&2
+
+  echo "" >> PKGBUILD
+  echo "## $0 ##" >> PKGBUILD
+fi
+
+exec makepkg ${@}

@@ -1,0 +1,261 @@
+yay -Syyu spotify
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
+yay -S spotify spicetify
+yay -S spotify spicetify-cli
+spicetify apply --verbose enable-devtool
+spicetify backup apply enable-devtool
+spicetify restore backup apply enable-devtool
+spicetify apply enable-devtool
+spicetify config extensions
+spicetify config current_theme Dribbblish color_scheme wal-
+chezmoi apply
+chezmoi diff
+git add .
+git checkout -b chezmoi
+git commit -m "initial chezmoi backup"
+git push
+git remote add origin https://github.com/Passeriform/dotfiles.git
+git status
+git push origin chezmoi
+chezmoi apply --verbose --dry-run
+chezmoi chattr +template ~/.config/spotify/prefs 
+chezmoi edit ~/.config/spotify/prefs 
+chezmoi apply --verbose --dry-run ~/.config/spotify/prefs
+grep -q '^app.enable-developer-mode=' ~/.config/spotify/prefs 
+grep -q '^app.enable-developer-mode=' ~/.config/spotify/prefs
+grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs
+! grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs
+[ ! grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs ]
+cd ..
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/
+chezmoi add .mozilla/firefox/hcurcbui.default/
+chezmoi add .mozilla/firefox/installs.ini 
+chezmoi add .mozilla/firefox/profiles.ini 
+reconnect jio
+cat /usr/local/bin/spotify 
+cat pkg-backup 
+cat scripts/pkg-backup 
+pkg-backup collate/pkgs
+mkdir pkgs
+rmdir pkgs
+mkdir collage/pkgs
+l
+mkdir ~/collage/pkgs
+mkdir ~/collate/pkgs
+nano scripts/pkg-backup 
+diff collate/pkgbootstrap/cargo-pkglist collate/pkgs/cargo-pkglist 
+diff collate/pkgbootstrap/cpan-pkglist collate/pkgs/cpan-pkglist 
+diff collate/pkgbootstrap/gem-pkglist collate/pkgs/gem-pkglist 
+diff collate/pkgbootstrap/pacman-pkglist collate/pkgs/pacman-pkglist 
+diff collate/pkgbootstrap/pip-pkglist collate/pkgs/pip-pkglist 
+diff collate/pkgbootstrap/yay-pkglist collate/pkgs/yay-pkglist
+rm -r collate/usr/local/share/applications/
+rm -r collate/usr/local/share/bash-completion/
+rm -r collate/usr/local/bin/
+sudo rm -r collate/usr/local/bin/
+yay -S grub-emu
+grub-emu
+sudo pacman -S grub-customizer
+grub-customizer
+sudo grub-customizer
+ll /boot/
+sudo thunar
+sudo vim collate/boot/EFI/grub/grub.cfg 
+nano .config/bspwm/bspwmrc 
+nano .config/picom/picom.conf 
+chezmoi add .config/picom/picom.conf 
+ls
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+.bash_it/install.sh 
+nano .bashrc
+. .bashrc 
+chezmoi add .bashrc 
+. .bashrc
+bash-it show aliases
+bash-it enable completion 
+chmod +x .local/share/chezmoi/.chezmoiscripts/run_after_bash_it_symlinks 
+chezmoi add .config/BetterDiscord/plugins/
+chezmoi add .config/google-chrome/
+chezmoi add .mozilla/firefox/
+sx
+chezmoid add .mozilla/firefox/
+reboot
+nano .bashr
+nano ~?.bashrc
+nano ~/.bashrc
+$TERM
+echo $TERM
+echo $BASH_IT_THEME
+. ~/.bashrc
+exit
+_bash-it-flash-term "${#BASH_IT_THEME}" "${BASH_IT_THEME}"
+bash-it update
+nano .profile 
+nano .bash_profile 
+. .bash_profile 
+nano .config/sxhkd/sxhkdrc 
+alacritty
+$SHELL
+echo $SHELL
+bash
+echo $LINUX
+echo $OS
+nano .bashrc 
+cat .bashrc | xclip
+cat .bashrc | pbcopy
+cat .bashrc | pbclip
+cat .bashrc | xcopy
+cat .bashrc
+$-
+echo $-
+bash -c .bashrc
+bash --help
+bash --rcfile .bashrc
+bash --rcfile ~/.bashrc
+bash --rcfile=.bashrc
+cp .bashrc .bashrc.old
+cp .bashrc.old .bashrc.bkup
+rm .bashrc.old 
+cd .bash-it
+ll
+cd .bash_it/
+./install.sh 
+set -x
+bash -x
+bah
+echo $BASH_IT
+echo SCM_CHECK
+echo $SCM_CHECK
+echo $BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE
+echo $BASH_IT_RELOAD_LEGACY
+source $BASH_IT/bash_it.sh 
+$@
+echo $DEBUGGS
+unzip drive-download-20220503T024927Z-001.zip 
+cd Downloads/
+unzip drive-download-20220503T031216Z-001.zip 
+sudo pacman -Syyu qpdf poppler-utils
+sudo pacman -Syyu qpdf poppler
+sudo pacman -S linux
+qpdf
+cd Downloads/Phase2/2020
+qpdf ./AyushBhala.pdf
+qpdf --stream-data=uncompress AyushBhala.pdf unpacked.pdf
+qpdf --stream-data=uncompress AayushBhala.pdf unpacked.pdf
+nano unpacked.pdf 
+rm unpacked.pdf 
+qpdf --qdf --object-streams=disable AayushBhala.pdf expanded.pdf
+nano expanded.pdf 
+xprop
+xprop WM_CLASS
+chezmoi add .config/picom/
+chezmoi apply --dry-run
+mv bruh/.bash_history .
+rm -r bruh/
+chezmoi add .bash_history 
+ll .bash_history 
+chmod 666 .bash_history 
+chezmoi add scripts/
+yay -S picom-ibhagwan-git
+reconnect jio2
+yay --editmenu --nodiffmenu --save
+yay -G picom-ibhagwan-git
+nano .cache/yay/picom-ibhagwan-git/PKGBUILD 
+cd .cache/yay/picom-ibhagwan-git
+makepkg -Si
+git remote get-url origin
+rm -r .git/
+rm -rf .git/
+rm -r picom
+rm -rf picom
+rm -rf src/
+rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1
+rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1*
+rm .SRCINFO 
+makepkg -sLF
+makepkg -sL
+cd src/picom/
+cd..
+..
+cd picom-
+cd picom-ibhagwan-git/
+rm -rf picom-ibhagwan-git/
+cd ~
+~
+git logn
+git login
+picom --version
+rm -rf .SRCINFO 
+rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1-x86_64.pkg.tar.zst 
+picom
+pkill -USR1 picom
+cd ../..
+checkrebuild
+cd .cache/yay/picom-ibhagwan-git/
+makepkg -g >> PKGBUILD
+ll src/
+makepkg
+makepkg -si
+makepkg -oi
+makepkg --skipinteg
+man yay
+nano /etc/makepkg.conf 
+sudo nano /etc/makepkg.conf 
+cp /etc/makepkg.conf ~/collate/etc/
+nano ~/scripts/install-patched-apps
+chmod +x ~/scripts/makepkg-prerun-wrapper 
+sudo pacman -S customizepkg
+yay -S customizepkg
+yay --noeditmenu --nodiffmenu --save
+chezmoi add ~/scripts
+chezmoi add ~/.customizepkg/
+customizepkg
+nano /etc/customizepkg.d/
+ll /etc/customizepkg.d/
+yay -Rsn customizepkg-patching
+yay -Rsn customizepkg-git
+yay -S customizepkg-git
+pacman -Rsn customizepkg-git
+yay -S customizepkg-scripting
+yay -Rsn customizepkg-scripting
+sed -i 's/source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"/'
+sed -i 's/source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"/' PKGBUILD 
+sed -i "s%source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g' PKGBUILD 
+sed -i "s%source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD 
+sed -i "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD 
+sed "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD 
+sed "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD | less
+sed "s%source\s*=\s*([^)]*%source=(git+\"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase\" \"https://github.com/ibhagwan/picom/pull/34.patch\"%g" PKGBUILD | less
+yay --save --makepkg ${SCRIPTS}/makepkg-prerun-wrapper
+makepkg -g
+chezmoi add ~/scripts/
+chezmoi add ~/.config/yay/
+chezmoi add .config/autostart/variety.desktop 
+chezmoi --help
+chezmoi apply --dry-run --keep-going
+chezmoi add .config/google-chrome/Default/
+chezmoi forget .config/google-chrome/
+nano .config/mimeapps.list 
+chezmoi add .config/mimeapps.list 
+chezmoi add .config/variety/
+chezmoi forget .config/variety
+chezmoi add .config/variety/Favorites/
+chezmoi add .config/variety/ui.conf 
+chezmoi add .config/variety/variety
+chezmoi add .config/variety/variety.conf
+chezmoi apply --dry-run --keep-goin
+chezmoi add .fehbg 
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/bookmarkbackups/
+chezmoi forget .mozilla/firefox/f8tyxumc.default-release/favicons.sqlite
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/places.sqlite
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/prefs
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/prefs.js 
+chezmoi add .mozilla/firefox/f8tyxumc.default-release/storage.sqlite 
+mkdir bruh
+archive-history -o bruh/
+ls bruh/
+ls -b bruh/
+ll bruh/
+mv bruh/.bash_history .bash_history 
+rm -r bruh/

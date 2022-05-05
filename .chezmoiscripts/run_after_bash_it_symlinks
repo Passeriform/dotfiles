@@ -1,0 +1,88 @@
+#!/bin/bash
+
+BASH_IT_DIR="${HOME}/.bash_it"
+
+declare -a aliases=(
+	"bash-it"
+	"bundler"
+	"clipboard"
+	"fuck"
+	"general"
+	"git"
+	"node"
+)
+
+declare -a completions=(
+	"aliases"
+	"awscli"
+	"bash-it"
+	"bundler"
+	"cargo"
+	"darts"
+	"default"
+	"dirs"
+	"django"
+	"docker-compose"
+	"docker"
+	"flutter"
+	"gem"
+	"git_flow"
+	"git"
+	"github-cli"
+	"go"
+	"gradle"
+	"kubectl"
+	"laravel"
+	"makefile"
+	"maven"
+	"notify-send"
+	"npm"
+	"pip"
+	"pip3"
+	"projects"
+	"rustup"
+	"ssh"
+	"terraform"
+	"tmux"
+	"travis"
+)
+
+declare -a plugins=(
+	"alias-completion"
+	"aws"
+	"base"
+	"battery"
+	"browser"
+	"colors"
+	"dirs"
+	"docker-compose"
+	"docker"
+	"git-subrepo"
+	"git"
+	"gitstatus"
+	"go"
+	"goenv"
+	"gradle"
+	"history-eternal"
+	"history-search"
+	"history-substring-search"
+	"history"
+	"github-cli"
+	"java"
+	"javascript"
+	"jekyll"
+	"man"
+	"nginx"
+	"virtualenv"
+	"xterm"
+)
+
+for entry in "${aliases[@]}"; do
+	bash-it enable alias $entry
+done
+for entry in "${completions[@]}"; do
+	bash-it enable completion $entry
+done
+for entry in "${plugins[@]}"; do
+	bash-it enable plugin $entry
+done

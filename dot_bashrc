@@ -2,9 +2,9 @@
 # ~/.bashrc
 #
 
-setup_aliases () {
+setup_aliases() {
 	# CCZE colored logs
-	cat () {
+	cat() {
 	    /usr/bin/cat $@ | ccze -A
 	}
 
@@ -21,7 +21,13 @@ setup_aliases () {
 	alias bspout='$EDITOR $HOME/.bspwm.out'
 }
 
-setup_bash_it () {
+setup_bash_it() {
+	# If not running interactively, don't do anything
+	case $- in
+	  *i*) ;;
+	    *) return;;
+	esac
+
 	# Path to the bash it configuration
 	export BASH_IT="/home/utkarsh/.bash_it"
 
@@ -46,13 +52,13 @@ setup_bash_it () {
 
 	# Uncomment this to make Bash-it create alias reload.
 	export BASH_IT_RELOAD_LEGACY=1
-
-	# Load Bash It
-	source "$BASH_IT"/bash_it.sh
 }
 
 setup_aliases
 setup_bash_it
+
+# Load Bash It
+source "$BASH_IT"/bash_it.sh
 
 # Pywal palette sourcing
 (cat $HOME/.cache/wal/sequences &)
@@ -69,12 +75,6 @@ HISTIGNORE="history*"
 if [ -z "$IGNOREFETCH" ] || [ "$IGNOREFETCH" != "true" ]; then
     neofetch --w3m
 fi
-
-# If not running interactively, don't do anything
-case $- in
-  *i*) ;;
-    *) return;;
-esac
 
 # Custom git repository hosting.
 export GIT_HOSTING='git@git.passeriform.com'

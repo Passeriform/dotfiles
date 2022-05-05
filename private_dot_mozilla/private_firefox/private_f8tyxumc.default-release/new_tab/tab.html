@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+    <head>
+        <title> New Tab </title>
+        <style type="text/css" media="screen">
+            body {
+                background-color: #171717 !important;
+                color: #c3c3c3 !important;
+            }
+            .everything {
+                display: grid;
+                min-width: 30vw;
+                width: max-content;
+                max-width: 60vw;
+                height: max-content;
+                grid-template-rows: max-content 1fr;
+                grid-template-areas: 'title' 'options';
+                margin: 34vh auto;
+                box-shadow: 0px 0px 10px black;
+                background-color: #222;
+                padding: 10px;
+            }
+            .title {
+                background-color: #333;
+                padding: 10px;
+                border: solid 3px rgb(163, 202, 218);
+                grid-area: title;
+                overflow: hidden;
+                height: max-content;
+            }
+            .textarea {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                height: 100%;
+                background-color: #444;
+                outline: none;
+                border: none;
+                box-shadow: none;
+                color:rgb(177, 210, 223);
+                padding: 2px;
+                box-shadow: 0px 0px 6px #111;
+            }
+            .textarea input {
+                background-color:transparent;
+                border: none;
+                outline: none;
+		color: rgba(163, 202, 218);
+                margin-left: 20px;
+            }
+            .sectitle {
+            	background-color: #393939;
+            	color: rgb(140, 170, 220);
+            	font-size: 24px;
+            	padding-left: 5px;
+            	box-shadow: 0px 0px 6px #111;
+            	transition: all linear 0.2s;
+            	height: 30px;
+            }
+            .sectitle:hover {
+            	box-shadow: none;
+            	background-color: #2d2d2d;
+            	font-size: 22px;
+            	transition: all linear 0.12s;
+            }
+            .options {
+                grid-area: options;
+                text-align: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 'dev social research';
+                background-color: transparent;
+                grid-gap: 5px;
+                max-width: 100%;
+                padding-bottom: 0px;
+            }
+            .dev {
+                grid-area: dev;
+            }
+            .social {
+                grid-area: social;
+            }
+            .research {
+                grid-area: research;
+            }
+            li a {
+                text-decoration: none;
+                color: rgb(163, 202, 218);
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+                border-bottom: solid 1px transparent;
+            }
+            li a:hover {
+                border-color: rgb(159, 218, 208);
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+            ul {
+                list-style: none;
+                background-color: #2d2d2d;
+                padding: 10px;
+                margin-bottom: 0px;
+                box-shadow: 0px 0px 6px #111;
+            }
+            * {
+                font-family:FiraCode Nerd Font Mono;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="everything">
+            <form class="textarea" method="get" action="https://google.com/search">
+                <label>[utkarsh@archlinux ~] search ≫ </label>
+                <input type="text" name="q" autofocus></input>
+            </form>
+            <div class="options">
+                <div class="option dev">
+                    <ul>
+                    	<li class="sectitle">Dev</li> 
+                        <li><a href="https://github.com">⇢ GitHub </a></li>
+                        <li><a href="https://gitlab.com">⇢ GitLab </a></li>
+                        <li><a href="https://console.aws.amazon.com/console/home">⇢ AWS Console </a></li>
+                    </ul>
+                </div>
+                <div class="option social">
+                    <ul>
+                    	<li class="sectitle">Social</li> 
+                        <li><a href="https://reddit.com">⇢ Reddit</a></li>
+                        <li><a href="https://youtube.com">⇢ YouTube</a></li>
+                        <li><a href="https://instagram.com">⇢ Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="option forums">
+                    <ul>
+                    	<li class="sectitle">Forums</li>
+                        <li><a href="https://stackoverflow.com">⇢ Stack Overflow</a></li>
+                        <li><a href="https://archlinux.org">⇢ Arch Linux Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </span>
+    </body>
+</html>
+

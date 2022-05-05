@@ -1,0 +1,8 @@
+[".themes/Kripton"]
+		type = "git-repo"
+    url = "https://github.com/EliverLara/Kripton.git"
+[".bash_it"]
+		type = "git-repo"
+    url = "https://github.com/Bash-it/bash-it.git"
+		[".bash_it".pull]
+        args = ["--depth=1"]

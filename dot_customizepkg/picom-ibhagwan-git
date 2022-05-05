@@ -1,0 +1,3 @@
+replace#global#source\s*=.*#source=(git+\"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase\" \"https://github.com/ibhagwan/picom/pull/34.patch\")
+replace#global#md5sums\s*=.*#md5sums=(\"SKIP\" \"1a73b8f99b65f1adef5c5ec95361521b\")
+replace#global#ninja -C build$#ninja -C build\n}\n\nprepare() {\n  cd \"${srcdir}/${_gitname}\"\n  patch --forward --strip=1 --input="${srcdir}/34.patch"\n

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# copy the data to modify to a temporary file
+tmpfile=$(mktemp)
+trap "rm -f ${tmpfile}" EXIT
+cat > "${tmpfile}"
+
+# write the data to stdout
+cat "${tmpfile}"
+
+# add devtools extension
+if ! grep -q ^app.enable-developer-mode= "${tmpfile}"; then
+    echo app.enable-developer-mode=true
+fi

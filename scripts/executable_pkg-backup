@@ -15,7 +15,7 @@ cpan -l | awk '{print $1}' > "$BACKUP_DIR/cpan-pkglist"
 gem list --no-versions > "$BACKUP_DIR/gem-pkglist"
 
 # npm - JS
-node ./npm-pkglist.js "$HOME/node_modules/" > "$BACKUP_DIR/npm-pkglist"
+node "${SCRIPTS}/npm-pkglist.js" "$HOME/node_modules/" > "$BACKUP_DIR/npm-pkglist"
 
 # cargo - Rust
 cargo install --list | awk '/^\w/ { print $1 }' > "$BACKUP_DIR/cargo-pkglist"
