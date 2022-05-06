@@ -44,3 +44,6 @@ safe_append "NPM_CONFIG_PREFIX" "$HOME/node_modules"
 
 # Add flutter paths
 safe_append "PATH" "/opt/flutter/bin"
+
+# Set yay makepkg to wrapper
+yay --save --makepkg ${SCRIPTS}/makepkg-prerun-wrapper
