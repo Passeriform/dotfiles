@@ -133,6 +133,8 @@ bspc rule -a Gparted desktop=^8 follow=on			#
 bspc rule -a Thunar desktop=^8 follow=on			#
                                                                 #
 bspc rule -a Pavucontrol desktop=^9 follow=on			#
+								#
+bspc rule -a "*:Toolkit:Picture-in-Picture" sticky=on focus=on	#
                                                                 #
 ##########################################################################
 ##									##

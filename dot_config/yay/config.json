@@ -1,7 +1,7 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"buildDir": "/home/utkarsh/.cache/yay",
-	"editor": "vim",
+	"editor": "",
 	"editorflags": "",
 	"makepkgbin": "/home/utkarsh/scripts/makepkg-prerun-wrapper",
 	"makepkgconf": "",
@@ -34,7 +34,7 @@
 	"pgpfetch": true,
 	"upgrademenu": true,
 	"cleanmenu": true,
-	"diffmenu": false,
+	"diffmenu": true,
 	"editmenu": false,
 	"combinedupgrade": false,
 	"useask": false,

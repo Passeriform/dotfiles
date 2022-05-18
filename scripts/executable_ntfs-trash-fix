@@ -10,7 +10,7 @@ if [ -d $target/.Trash-1000 ]; then
 else
 	echo "================= Trash was not found ==================="
 	mkdir $target/.Trash-1000
-	chown -R $USER:$USER $target/.Trash-1000/
+	chown -R $USER $target/.Trash-1000/
 fi
 
 echo "================ Trash Fix Complete =================="

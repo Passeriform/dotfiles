@@ -8,3 +8,5 @@
 	name = Passeriform
 [core]
 	autocrlf = false
+[safe]
+	directory = /Development/MyProjects/Collate
