@@ -1,1 +1,141 @@
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+configuration {
+	modi: "window,run,ssh,drun,combi";
+	hover-select: true;
+	combi-modi: "window,run,ssh,drun";
+	window-format: "⦗{w:6}⦘\t{c}	❯	{t}";
+	combi-display-format: "【 {mode} 】 {text}";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+	spacing: 0;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	font: "Comfortaa 9";
+}
+
+#window {
+	anchor: center;
+	background-color: @background;
+}
+
+#mainbox {
+	children: [message, inputbar, listview];
+}
+
+#inputbar {
+	padding: 4ch 5ch;
+	spacing: 2ch;
+	vertical-align: 0.5;
+	children: [textbox-prompt, entry, overlay, case-indicator];
+}
+
+#textbox-prompt {
+	font: "Fira Code Nerd Font Mono 16";
+	expand: false;
+	str: "❯";
+	text-color: @foreground;
+}
+
+#entry {
+	vertical-align: 0.5;
+	text-color: @foreground;
+}
+
+#case-indicator {
+	text-color: @foreground;
+}
+
+#message {
+	padding: 2ch;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	background-color: @color4;
+	text-color: @background;
+}
+
+#textbox {
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+}
+
+#button {
+	padding: 1ch;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	border-radius: 5;
+	background-color: @foreground;
+	text-color: @background;
+	cursor: pointer;
+}
+
+#button selected {
+	background-color: @foreground;
+}
+
+#listview {
+	lines: 8;
+	margin: 0ch 5ch 5ch 5ch;
+	spacing: 1ch;
+	scrollbar: false;
+}
+
+#element {
+	margin: 0;
+	padding: 2ch;
+	spacing: 3ch;
+	vertical-align: 0.5;
+	background-color: @background;
+	text-color: @foreground;
+}
+
+#element normal.active, element alternate.active {
+	background-color: @color2;
+	text-color: @background;
+}
+
+#element normal.urgent, element alternate.urgent {
+	background-color: @color6;
+	text-color: @background;
+}
+
+#element selected {
+	border-radius: 5;
+	background-color: @foreground;
+	text-color: @background;
+}
+
+#element-text {
+	text-color: inherit;
+	vertical-align: 0.5;
+}
+
+#element-icon {
+	size: 24;
+	vertical-align: inherit;
+}
+
+#mode-switcher {
+	expand: false;
+	orientation: horizontal;
+	padding: 3ch;
+	spacing: 2ch;
+}
+
+#error-message {
+	children: [error-message-box];
+}
+
+#error-message-box {
+	vertical-align: 0.5;
+}

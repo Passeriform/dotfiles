@@ -1,0 +1,80 @@
+@theme "./applet.rasi"
+
+#box-options {
+	children: [ box-toggle-bluetooth, box-toggle-scan, box-toggle-discoverable ];
+}
+
+#box-toggle-bluetooth {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-toggle-bluetooth-icon, button-toggle-bluetooth ];
+}
+
+#box-toggle-scan {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-toggle-scan-icon, button-toggle-scan ];
+}
+
+#box-toggle-discoverable {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-toggle-discoverable-icon, button-toggle-discoverable ];
+}
+
+#button-toggle-bluetooth-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-toggle-scan-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-toggle-discoverable-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-toggle-bluetooth {
+	content: "  Toggle\nBluetooth";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-toggle-scan {
+	content: "Toggle\n Scan";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-toggle-discoverable {
+	content: "     Toggle\nDiscoverable";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-3";
+}

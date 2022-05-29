@@ -1,0 +1,17 @@
+@import "./config.rasi"
+
+#mainbox {
+	children: [message];
+}
+
+#message {
+	padding: 6ch;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+	background-color: @background;
+}
+
+#textbox {
+	font: "Comfortaa 12";
+	text-color: @foreground;
+}

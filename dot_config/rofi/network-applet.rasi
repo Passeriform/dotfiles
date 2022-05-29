@@ -1,0 +1,55 @@
+@theme "./applet.rasi"
+
+#box-options {
+	children: [ box-togglewifi, box-reconnect ];
+}
+
+#box-togglewifi {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-togglewifi-icon, button-togglewifi ];
+}
+
+#box-reconnect {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-reconnect-icon, button-reconnect ];
+}
+
+#button-togglewifi-icon {
+	content: "直";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-reconnect-icon {
+	content: "勒";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-togglewifi {
+	content: "Toggle WiFi";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-reconnect {
+	content: "Reconnect";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}

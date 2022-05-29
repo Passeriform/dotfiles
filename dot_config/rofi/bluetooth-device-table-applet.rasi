@@ -1,0 +1,80 @@
+@theme "./applet.rasi"
+
+#box-options {
+	children: [ box-connect, box-pair, box-trust ];
+}
+
+#box-connect {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-connect-icon, button-connect ];
+}
+
+#box-pair {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-pair-icon, button-pair ];
+}
+
+#box-trust {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-trust-icon, button-trust ];
+}
+
+#button-connect-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-pair-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-trust-icon {
+	content: "";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 18";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-connect {
+	content: "Connect";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-pair {
+	content: "Pair";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-trust {
+	content: "Trust";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-3";
+}

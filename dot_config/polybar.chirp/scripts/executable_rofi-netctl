@@ -8,8 +8,74 @@
 #
 # _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-choice=`find /etc/netctl -maxdepth 1 -type f -printf $'<span size="200%" rise="-2000">﬉</span>\t%f\n' | rofi -markup -markup-rows -dmenu -theme ${HOME}/.config/rofi/applet.rasi`;
-if [ -n "$choice" ]; then
-	PASSWORD=$(rofi -dmenu -password -theme "${HOME}/.config/rofi/password.rasi")
-	echo "$PASSWORD" | sudo -S netctl switch-to $(echo "$choice" | cut -d $'\t' -f 2)
+authCall() {
+	set -x
+	SUDO_ASKPASS="${HOME}/.config/rofi/askpass.sh" sudo -A "$@" &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+}
+
+recall() {
+	./$1 && exit || exit
+}
+
+rofi_command=(rofi -markup -markup-rows -theme ${HOME}/.config/rofi/network-applet.rasi)
+
+## Get info
+PROFILES=($(netctl list | cut -c 3-))
+
+FORMATTED_PROFILES=()
+
+BLOCKED="$(rfkill list -J wlan | grep "Soft blocked" | cut -d " " -f 3)"
+
+if [[ $BLOCKED == *"no"* ]]; then
+	for PROFILE in "${PROFILES[@]}"; do
+		if [[ $PROFILE == e* ]]; then
+				ICON=""
+		else
+				ICON="﬉"
+		fi
+
+		ENTRY="<span size='200%' rise='-2000'>${ICON}</span>\t${PROFILE}"
+
+		STATUS="$(systemctl is-active "netctl@${PROFILE}.service")" || true
+
+		if [[ $STATUS == *"active"* ]]; then
+			ENTRY="<b>${ENTRY}</b>"
+		fi
+
+		FORMATTED_PROFILES+="${ENTRY}\n"
+	done
+else
+	FORMATTED_PROFILES=("Disconnected...")
 fi
+
+STATUS=$((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null && echo "CONNETED" || echo "DISCONNECTED")
+PIP="$(wget --timeout=30 http://ipinfo.io/ip -qO - || echo 'Not Available')"
+MESSAGE="<b>Status: $STATUS"$'\t\t'"IP: $PIP</b>"
+
+options="${FORMATTED_PROFILES[@]}"
+
+chosen="$(echo -en "$options" | ${rofi_command[@]} -mesg "${MESSAGE}" -dmenu -selected-row 1 2> /dev/null)"
+
+case $? in
+	10)
+		rfkill toggle wlan
+		recall ./$0
+		;;
+	11)
+		active_SSID="$(netctl list | grep "*" | cut -d " " -f 2-)"
+		authCall ${SCRIPTS}/reconnect $active_SSID
+		recall ./$0
+		;;
+	1)
+		exit 0
+esac
+
+case $chosen in
+	*)
+		parsed_chosen=$(echo $chosen | sed -e 's/<[^>]*>//g' | cut -d " " -f 2)
+		if [[ $parsed_chosen != "Disconnected..." ]]; then
+			authCall netctl switch-to $parsed_chosen
+		fi
+		recall ./$0
+		;;
+esac

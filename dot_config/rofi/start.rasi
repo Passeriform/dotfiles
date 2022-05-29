@@ -1,16 +1,18 @@
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+@import "./config.rasi"
 
 #window {
 	fullscreen: true;
 }
 
-#textbox-prompt-colon {
+#textbox-prompt {
 	str: "﩯";
 }
 
 #listview {
-	lines: 5;
-	expand: false;
+	spacing: 4ch;
+  columns: 5;
+	dynamic: true;
+	fixed-columns: true;
 }
 
 #entry {
@@ -18,10 +20,16 @@
 }
 
 #element {
-	margin: 5;
-	padding: 20;
+	spacing: 2ch;
+	orientation: vertical;
 }
 
 #element-icon {
-	size: 56;
+	size: 64;
+}
+
+#element-text {
+	expand: true;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
 }

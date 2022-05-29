@@ -1,5 +1,39 @@
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "./config.rasi"
 
-#textbox-prompt-colon {
+configuration {
+	location: 3;
+	yoffset: 40;
+	xoffset: -10;
+}
+
+#window {
+	anchor: North East;
+	width: 45ch;
+}
+
+#inputbar {
+	padding: 3ch 5ch 3ch 5ch;
+}
+
+#textbox-prompt {
 	str: "";
+}
+
+#mainbox {
+	children: [ message, inputbar, listview, box-options ];
+}
+
+listview {
+	lines: 5;
+	dynamic: true;
+	fixed-height: false;
+}
+
+/* Extensible action options for applet */
+#box-options {
+	expand: false;
+	orientation: horizontal;
+	spacing: 2ch;
+	margin: 3ch 4ch 3ch 4ch;
+	children: [ ];
 }
