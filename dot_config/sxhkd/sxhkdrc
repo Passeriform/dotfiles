@@ -101,7 +101,7 @@ super + shift + Return
 								#
 # Task manager							#
 ctrl + shift + Escape
-    termite 'Htop Task Manager' -e htop				#
+    alacritty 'Htop Task Manager' -e htop				#
 								#
 # Rofi DRun							#
 super + r
