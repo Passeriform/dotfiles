@@ -100,8 +100,9 @@ configuration {
 }
 
 #element normal.active, element alternate.active {
-	background-color: @color2;
-	text-color: @background;
+	border: 2 5;
+	border-radius: 5;
+	border-color: @color2;
 }
 
 #element normal.urgent, element alternate.urgent {

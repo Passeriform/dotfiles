@@ -9,7 +9,6 @@
 # _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 authCall() {
-	set -x
 	SUDO_ASKPASS="${HOME}/.config/rofi/askpass.sh" sudo -A "$@" &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
 }
 
@@ -44,8 +43,12 @@ if [[ $BLOCKED == *"no"* ]]; then
 
 		FORMATTED_PROFILES+="${ENTRY}\n"
 	done
+	export rofiToggleWifiIcon="\"睊\""
+	export rofiToggleWifiText="\"Turn off\""
 else
 	FORMATTED_PROFILES=("Disconnected...")
+	export rofiToggleWifiIcon="\"直\""
+	export rofiToggleWifiText="\"Turn on\""
 fi
 
 STATUS=$((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null && echo "CONNETED" || echo "DISCONNECTED")

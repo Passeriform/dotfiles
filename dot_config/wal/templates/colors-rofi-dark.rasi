@@ -1,113 +1,20 @@
-/*
- * ROFI color theme
- *
- * Based on the Materia Color Scheme (https://github.com/nana-4/materia-theme)
- *
- * Created by Grant Handy
- */
-
 * {{
-	spacing: 0;
-	background-color: transparent;
-	font: "Comfortaa 9";
-}}
-
-#window {{
-	height: 80ch;
-	background-color: {background};
-}}
-
-#mainbox {{
-	children: [inputbar, message, listview];
-	spacing: 30px;
-	/*margin: 20%;*/
-	padding: 30px 0;
-}}
-
-#inputbar {{
-	padding: 0 30px;
-	children: [textbox-prompt-colon, entry, case-indicator];
-}}
-
-#prompt {{
-	text-color: {foreground};
-}}
-
-#textbox-prompt-colon {{
-	font: "Fira Code Nerd Font Mono 16";
-	expand: false;
-	str: "❯";
-	margin: -0.25ch 1ch 0 0;
-	text-color: {color7};
-}}
-
-#entry {{
-	vertical-align: 0.5;
-	text-color: {foreground};
-}}
-
-#case-indicator {{
-	text-color: {color3};
-}}
-
-#sidebar, message {{
-	border: 1px 0;
-	border-color: {color2};
-}}
-
-#button, textbox {{
-	background-color: {background};
-	text-color: {foreground};
-	padding: 5px;
-}}
-
-#button selected {{
-	background-color: {color2};
-}}
-
-#listview {{
-	scrollbar: true;
-	margin: 0 10px 0 30px;
-}}
-
-#element {{
-	padding: 15px;
-	highlight: bold underline;
-}}
-
-#element normal {{
-	background-color: transparent;
-}}
-
-#element selected {{
-	text-color: {color0};
-	background-color: {color4};
-}}
-
-#element alternate {{
-	/*background-color: {background};*/
-}}
-
-#element normal normal, element alternate normal {{
-	text-color: {color2};
-}}
-
-#element normal urgent, element alternate urgent {{
-	text-color: {color6};
-}}
-
-#element normal active, element alternate active {{
-	text-color: {color10};
-}}
-
-#element-text {{
-	text-color: inherit;
-	background-color: inherit;
-	vertical-align: 0.5;
-	margin: 0 0 0 1%;
-}}
-
-#element-icon {{
-	size: 24;
-	vertical-align: 0.5;
+	background: {background};
+	foreground: {foreground};
+	color0: {color0};
+	color1: {color1};
+	color2: {color2};
+	color3: {color3};
+	color4: {color4};
+	color5: {color5};
+	color6: {color6};
+	color7: {color7};
+	color8: {color8};
+	color9: {color9};
+	color10: {color10};
+	color11: {color11};
+	color12: {color12};
+	color13: {color13};
+	color14: {color14};
+	color15: {color15};
 }}

@@ -56,7 +56,7 @@
 }
 
 #button-connect {
-	content: "Connect";
+	content: env(rofiBluetoothDeviceConnect, "Connect");
 	vertical-align: 0.5;
 	horizontal-align: 0.5;
 	cursor: pointer;

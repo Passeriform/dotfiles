@@ -1,14 +1,14 @@
 @theme "./applet.rasi"
 
 #box-options {
-	children: [ box-togglewifi, box-reconnect ];
+	children: [ box-toggle-wifi, box-reconnect ];
 }
 
-#box-togglewifi {
+#box-toggle-wifi {
 	background-color: @color4;
 	border-radius: 5;
 	spacing: 1ch;
-	children: [ button-togglewifi-icon, button-togglewifi ];
+	children: [ button-toggle-wifi-icon, button-toggle-wifi ];
 }
 
 #box-reconnect {
@@ -18,8 +18,8 @@
 	children: [ button-reconnect-icon, button-reconnect ];
 }
 
-#button-togglewifi-icon {
-	content: "直";
+#button-toggle-wifi-icon {
+	content: env(rofiToggleWifiIcon, "睊");
 	padding: 1ch;
 	font: "Fira Code Nerd Font Mono 18";
 	vertical-align: 0.5;
@@ -38,8 +38,8 @@
 	action: "kb-custom-2";
 }
 
-#button-togglewifi {
-	content: "Toggle WiFi";
+#button-toggle-wifi {
+	content: env(rofiToggleWifiText, "Turn off");
 	vertical-align: 0.5;
 	horizontal-align: 0.5;
 	cursor: pointer;
