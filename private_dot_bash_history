@@ -1,261 +1,503 @@
-yay -Syyu spotify
-sudo chmod a+wr /opt/spotify
-sudo chmod a+wr /opt/spotify/Apps -R
-yay -S spotify spicetify
-yay -S spotify spicetify-cli
-spicetify apply --verbose enable-devtool
-spicetify backup apply enable-devtool
-spicetify restore backup apply enable-devtool
-spicetify apply enable-devtool
-spicetify config extensions
-spicetify config current_theme Dribbblish color_scheme wal-
-chezmoi apply
-chezmoi diff
-git add .
-git checkout -b chezmoi
-git commit -m "initial chezmoi backup"
-git push
-git remote add origin https://github.com/Passeriform/dotfiles.git
-git status
-git push origin chezmoi
-chezmoi apply --verbose --dry-run
-chezmoi chattr +template ~/.config/spotify/prefs
-chezmoi edit ~/.config/spotify/prefs
-chezmoi apply --verbose --dry-run ~/.config/spotify/prefs
-grep -q '^app.enable-developer-mode=' ~/.config/spotify/prefs
-grep -q '^app.enable-developer-mode=' ~/.config/spotify/prefs
-grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs
-! grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs
-[ ! grep -q ^app.enable-developer-mode= ~/.config/spotify/prefs ]
+$(wget --timeout=30 http://ipinfo.io/ip -qO -)
+PIP="$(wget --timeout=30 http://ipinfo.io/ip -qO - || echo 'Not Available')"
+echo $PIP
+PIP="$(wget --timeout=30 http://ipinfo.io/ip -qO - || echo 'Not Available')"
+echo $PIP
+[[ $(ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net &>/dev/null) ]] && echo "CONNETED" || echo "DISCONNECTED"
+STATUS=[[ $($(ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNETED" || echo "DISCONNECTED"
+echo $STATUS
+[[ $($(ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && "CONNETED" || "DISCONNECTED"
+[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && "CONNETED" || "DISCONNECTED"
+STATUS=[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && "CONNETED" || "DISCONNECTED"
+STATUS=[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNETED" || echo"DISCONNECTED"
+STATUS=[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNETED" || echo "DISCONNECTED"
+STATUS=[[ (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null ]] && echo "CONNETED" || echo "DISCONNECTED"
+STATUS=[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNETED" || echo "DISCONNECTED"
+STATUS=$((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null)
+echo $STATUS
+echo $STATUS && echo "yeh" || echo "nah"
+STATUS=[[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]]
+STATUS=$([[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]])
+echo $STATUS && echo "yeh" || echo "nah"
+STATUS=$([[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNECTED" || echo "DISCONNECTED" )
+STATUS=$([[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNECTED" || echo "DISCONNECTED")
+echo $STATUS && echo "yeh" || echo "nah"
+echo $STATUS && echo "yeh" || echo "nah"
+echo $STATUS
+echo $STATUS && echo "yeh" || echo "nah"
+echo $STATUS && echo "yeh" || echo "nah"
+STATUS=$([[ $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null) ]] && echo "CONNECTED" || echo "DISCONNECTED")
+echo $STATUS && echo "yeh" || echo "nah"
+STATUS=[[ $(ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null ]] && echo "CONNETED" || echo "DISCONNECTED"
+echo $STATUS
+STATUS= $((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null && echo "CONNETED" || echo "DISCONNECTED")
+STATUS=$((ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null && echo "CONNETED" || echo "DISCONNECTED")
+echo $STATUS
+MESSAGE=$(echo -e "Status: $STATUS\t\tIP: $PIP") && echo $MESSAGE
+MESSAGE=$(echo -e "Status: $STATUS\t\t\tIP: $PIP") && echo $MESSAGE
+echo -e "Status: $STATUS\t\t\tIP: $PIP"
+MESSAGE="Status: $STATUS"$'\t\t'"IP: $PIP" || echo $MESSAGE
+MESSAGE="Status: $STATUS"$'\t\t'"IP: $PIP" && echo $MESSAGE
+MESSAGE="Status: $STATUS"$'\t\t'"IP: $PIP" && echo -e $MESSAGE
+MESSAGE="Status: $STATUS"$'\t\t'"IP: $PIP" && echo -e "$MESSAGE"
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+netctl status
+netctl list
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi" -dumptheme
+rofi -dmenu -theme "${HOME}/.config/rofi/message.rasi" -dumptheme
+rofi -dmenu -theme "${HOME}/.config/rofi/message.rasi"
+rofi -dmenu -theme "${HOME}/.config/rofi/message.rasi"
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+netctl-auto
+netctl-auto list
+netctl-auto list
+netctl list
+netctl list | grep "*" | cut -d " " -f 2
+active_SSID="$(netctl list | grep "*" | cut -d " " -f 2-)"
+echo $active_SSID
+./.config/polybar/scripts/rofi-netctl 
+(echo "$PASSWORD" | sudo -S "$@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+(echo "asd" | sudo -S "$@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+(echo "b1@ckf1@re" | sudo -S "$@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+(echo "b1@ckf1@re" | sudo -S "netctl switch-to wlo1-DIGISOL@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+(echo "b1@ckf1@re" | sudo -S "netctl switch-to wlo1-jio@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+(echo "b1@ckf1@re" | sudo -S "netctl switch-to jio2@") &> /dev/null || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+echo "b1@ckf1@re" | sudo -S "netctl switch-to jio2@" || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+echo "b1@ckf1@re" | sudo -S "netctl switch-to jio2" || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+printf 'b1@ckf1@re' | sudo -S "netctl switch-to jio2" || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+printf 'b1@ckf1@re' | sudo -S "netctl switch-to jio2"
+printf 'b1@ckf1@re' | sudo -S netctl switch-to jio2
+echo 'b1@ckf1@re' | sudo -S netctl switch-to jio2
+echo 'b1@ckf1@re' | sudo -Si netctl switch-to jio2
+SUDO_ASKPASS="b1@ckf1@re" sudo -A "netctl switch-to jio2" || rofi -dmenu -mesg $'<b>Error:</b>\tInvalid password provided' -theme "${HOME}/.config/rofi/message.rasi"
+chmod .config/rofi/askpass.sh 
+chmod +x .config/rofi/askpass.sh 
+./.config/rofi/askpass.sh 
+./.config/polybar/scripts/rofi-netctl 
+./.config/polybar/scripts/rofi-netctl 
+netctl list
+netctl list
+./.config/polybar/scripts/rofi-netctl 
+netctl list
+./.config/polybar/scripts/rofi-netctl 
+.config/rofi/askpass.sh 
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+rofi --help
+rofi --help | grep -i
+rofi -help
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+.config/rofi/askpass.sh
+echo "$(.config/rofi/askpass.sh)"
+echo "$(.config/rofi/askpass.sh)"
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio2
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+echo "$(.config/rofi/askpass.sh)"
+SUDO_ASKPASS=.config/rofi/askpass.sh sudo -A netctl switch-to jio
+cd Notes/
+note add "Create rofi applet for bluetooth"
+note add "Fix column enumeration in start.rasi"
+note list
+bluetoothctl show | grep -q 'Powered:'
+bluetoothctl show | grep -q 'Powered:'
+bluetoothctl show
+bluetoothctl show | grep -q "Powered:"
+bluetoothctl show | grep -q "Powered:" || echo "nah"
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-))
+echo $DEVICES
+echo ${DEVICES[@}}
+echo ${DEVICES[@]}
+echo ${DEVICES[1]}
+echo ${DEVICES[3]}
+bluetoothctl --help
+bluetoothctl list
+bluetoothctl show
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2-
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d -f2-
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d ' ' -f2-
+bluetoothctl devices | cut -f2 -d ' '
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep 'Name\|Connected: yes"
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep 'Name\|Connected: yes'
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep 'Name\|Connected: yes' | grep -B1 "yes"
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep "Name\|Connected: yes" | grep -B1 "yes"
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d ' ' -f2-
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes" | head -n 1 |
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes" | head -n 1
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes" | grep -B1 "yes"
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name|Connected: yes"
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1
+bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d ' ' -f2-
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e 'Name\|Connected: yes' | grep -B1 'yes' | head -n 1 | cut -d ' ' -f2-
+DEVICE="$(bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e 'Name\|Connected: yes' | grep -B1 'yes' | head -n 1 | cut -d ' ' -f2-)"
+echo $DEVICE
+$DEVICE && echo "done"
+-z $DEVICE
+[ -z $DEVICE ]
+[ ! -z $DEVICE ]
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-))
+echo $DEVICES
+[ ! -z $DEVICE ] && echo "done"
+[ ! -z $DEVICE ] && echo "done" || echo "bruh
+'
+"
+[ ! -z $DEVICE ] && echo "done" || echo "bruh"
+[ -nz $DEVICE ] && echo "done" || echo "bruh"
+echo $DEVICE && "done"
+echo ($DEVICE && "done")
+./.config/polybar/scripts/rofi-bluetooth 
+CONNECTED_DEVICE="$(bluetoothctl devices | cut -f2 -d ' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e 'Name\|Connected: yes' | grep -B1 'yes' | head -n 1 | cut -d ' ' -f2-)"
+		if [ -nz $CONNECTED_DEVICE ]; then 			STATUS="CONNECTED"; 			CONNECTED_DEVICE_STATUS=$CONNECTED_DEVICE; 		else 			STATUS="NOT CONNECTED"; 			CONNECTED_DEVICE_STATUS='Not Available'; 		fi
+echo $STATUS
+[ -nz $CONNECTED_DEVICE ]
+$CONNECTED_DEVICE
+[ -z $CONNECTED_DEVICE ]
+[ ! -z $CONNECTED_DEVICE ]
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+echo -en '<span size=150% rise=-1500></span>\tRockerz\n<span size=150% rise=-1500></span>\t255\n<span size=150% rise=-1500></span>\tPro+\n<span size=150% rise=-1500></span>\t01590d05\n<span size=150% rise=-1500></span>\tb9dec89d\n<span size=150% rise=-1500></span>\tJBL\n<span size=150% rise=-1500></span>\tE25BT\n<span size=150% rise=-1500></span>\tJR_JioSTB-RFLSBLF82066137\n' | rofi -markup -markup-rows -dmenu -theme /home/utkarsh/.config/rofi/bluetooth-applet.rasi -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1
+./.config/polybar/scripts/rofi-bluetooth 
+IFS=' ' read -a DEVICES <<< "$(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)"
+echo $DEVICES
+echo ${DEVICES[0]}
+IFS=$'\n' read -a DEVICES <<< "$(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)"
+echo ${DEVICES[0]}
+echo ${DEVICES[1]}
+echo ${DEVICES[2]}
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-))
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo DEVICES
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo $DEVICES
+DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[0]}
+IFS=$'\n' DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[0]}
+IFS=$'\n' DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[1]}
+IFS=$'\n' DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[2]}
+IFS=$'\n' DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[3]}
+IFS=$'\n' DEVICES=($(bluetoothctl devices | grep Device | cut -d ' ' -f 3-)) && echo ${DEVICES[4]}
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+$options
+options='<span size='\''150%'\'' rise='\''-1500'\''></span>\tRockerz 255 Pro+\n<span size='\''150%'\'' rise='\''-1500'\''></span>\t01590d05\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tb9dec89d\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJBL E25BT\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJR_JioSTB-RFLSBLF82066137\n'
+++ echo -en '<span size='\''150%'\'' rise='\''-1500'\''></span>\tRockerz 255 Pro+\n<span size='\''150%'\'' rise='\''-1500'\''></span>\t01590d05\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tb9dec89d\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJBL E25BT\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJR_JioSTB-RFLSBLF82066137\n'
+options='<span size='\''150%'\'' rise='\''-1500'\''></span>\tRockerz 255 Pro+\n<span size='\''150%'\'' rise='\''-1500'\''></span>\t01590d05\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tb9dec89d\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJBL E25BT\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJR_JioSTB-RFLSBLF82066137\n'
+echo "${options}" | rofi -markup -markup-rows -dmenu -theme /home/utkarsh/.config/rofi/bluetooth-applet.rasi' -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1
+echo "${options}" | rofi -markup -markup-rows -dmenu -theme '/home/utkarsh/.config/rofi/bluetooth-applet.rasi' -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1
+echo $options | rofi -markup -markup-rows -dmenu -theme '/home/utkarsh/.config/rofi/bluetooth-applet.rasi' -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1
+echo -en "${options}" | rofi -markup -markup-rows -dmenu -theme '/home/utkarsh/.config/rofi/bluetooth-applet.rasi' -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1
+chosen="$(echo -en "$options" | rofi -markup -markup-rows -dmenu -theme '/home/utkarsh/.config/rofi/bluetooth-applet.rasi' -mesg 'Status: NOT CONNECTED	Device: Not Available' -dmenu -selected-row 1 2> /dev/null)"
+$chosen
+echo $chosen
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+[200~rofi -markup -markup-rows -dmenu -theme /home/utkarsh/.config/rofi/bluetooth-applet.rasi~
+rofi -markup -markup-rows -dmenu -theme /home/utkarsh/.config/rofi/bluetooth-applet.rasi
 cd ..
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/
-chezmoi add .mozilla/firefox/hcurcbui.default/
-chezmoi add .mozilla/firefox/installs.ini
-chezmoi add .mozilla/firefox/profiles.ini
-reconnect jio
-cat /usr/local/bin/spotify
-cat pkg-backup
-cat scripts/pkg-backup
-pkg-backup collate/pkgs
-mkdir pkgs
-rmdir pkgs
-mkdir collage/pkgs
-l
-mkdir ~/collage/pkgs
-mkdir ~/collate/pkgs
-nano scripts/pkg-backup
-diff collate/pkgbootstrap/cargo-pkglist collate/pkgs/cargo-pkglist
-diff collate/pkgbootstrap/cpan-pkglist collate/pkgs/cpan-pkglist
-diff collate/pkgbootstrap/gem-pkglist collate/pkgs/gem-pkglist
-diff collate/pkgbootstrap/pacman-pkglist collate/pkgs/pacman-pkglist
-diff collate/pkgbootstrap/pip-pkglist collate/pkgs/pip-pkglist
-diff collate/pkgbootstrap/yay-pkglist collate/pkgs/yay-pkglist
-rm -r collate/usr/local/share/applications/
-rm -r collate/usr/local/share/bash-completion/
-rm -r collate/usr/local/bin/
-sudo rm -r collate/usr/local/bin/
-yay -S grub-emu
-grub-emu
-sudo pacman -S grub-customizer
-grub-customizer
-sudo grub-customizer
-ll /boot/
-sudo thunar
-sudo vim collate/boot/EFI/grub/grub.cfg
-nano .config/bspwm/bspwmrc
-nano .config/picom/picom.conf
-chezmoi add .config/picom/picom.conf
-ls
-git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-.bash_it/install.sh
-nano .bashrc
-. .bashrc
-chezmoi add .bashrc
-. .bashrc
-bash-it show aliases
-bash-it enable completion
-chmod +x .local/share/chezmoi/.chezmoiscripts/run_after_bash_it_symlinks
-chezmoi add .config/BetterDiscord/plugins/
-chezmoi add .config/google-chrome/
-chezmoi add .mozilla/firefox/
-sx
-chezmoid add .mozilla/firefox/
-reboot
-nano .bashr
-nano ~?.bashrc
-nano ~/.bashrc
-$TERM
-echo $TERM
-echo $BASH_IT_THEME
-. ~/.bashrc
-exit
-_bash-it-flash-term "${#BASH_IT_THEME}" "${BASH_IT_THEME}"
-bash-it update
-nano .profile
-nano .bash_profile
-. .bash_profile
-nano .config/sxhkd/sxhkdrc
-alacritty
-$SHELL
-echo $SHELL
-bash
-echo $LINUX
-echo $OS
-nano .bashrc
-cat .bashrc | xclip
-cat .bashrc | pbcopy
-cat .bashrc | pbclip
-cat .bashrc | xcopy
-cat .bashrc
-$-
-echo $-
-bash -c .bashrc
-bash --help
-bash --rcfile .bashrc
-bash --rcfile ~/.bashrc
-bash --rcfile=.bashrc
-cp .bashrc .bashrc.old
-cp .bashrc.old .bashrc.bkup
-rm .bashrc.old
-cd .bash-it
-ll
-cd .bash_it/
-./install.sh
-set -x
-bash -x
-bah
-echo $BASH_IT
-echo SCM_CHECK
-echo $SCM_CHECK
-echo $BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE
-echo $BASH_IT_RELOAD_LEGACY
-source $BASH_IT/bash_it.sh
-$@
-echo $DEBUGGS
-unzip drive-download-20220503T024927Z-001.zip
-cd Downloads/
-unzip drive-download-20220503T031216Z-001.zip
-sudo pacman -Syyu qpdf poppler-utils
-sudo pacman -Syyu qpdf poppler
-sudo pacman -S linux
-qpdf
-cd Downloads/Phase2/2020
-qpdf ./AyushBhala.pdf
-qpdf --stream-data=uncompress AyushBhala.pdf unpacked.pdf
-qpdf --stream-data=uncompress AayushBhala.pdf unpacked.pdf
-nano unpacked.pdf
-rm unpacked.pdf
-qpdf --qdf --object-streams=disable AayushBhala.pdf expanded.pdf
-nano expanded.pdf
-xprop
-xprop WM_CLASS
-chezmoi add .config/picom/
-chezmoi apply --dry-run
-mv bruh/.bash_history .
-rm -r bruh/
-chezmoi add .bash_history
-ll .bash_history
-chmod 666 .bash_history
-chezmoi add scripts/
-yay -S picom-ibhagwan-git
-reconnect jio2
-yay --editmenu --nodiffmenu --save
-yay -G picom-ibhagwan-git
-nano .cache/yay/picom-ibhagwan-git/PKGBUILD
-cd .cache/yay/picom-ibhagwan-git
-makepkg -Si
-git remote get-url origin
-rm -r .git/
-rm -rf .git/
-rm -r picom
-rm -rf picom
-rm -rf src/
-rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1
-rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1*
-rm .SRCINFO
-makepkg -sLF
-makepkg -sL
-cd src/picom/
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth 
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
 cd..
-..
-cd picom-
-cd picom-ibhagwan-git/
-rm -rf picom-ibhagwan-git/
-cd ~
-~
-git logn
-git login
-picom --version
-rm -rf .SRCINFO
-rm -rf picom-ibhagwan-git-1578_Next.297.gd74c099_2021.06.09-1-x86_64.pkg.tar.zst
-picom
-pkill -USR1 picom
-cd ../..
-checkrebuild
-cd .cache/yay/picom-ibhagwan-git/
-makepkg -g >> PKGBUILD
-ll src/
-makepkg
-makepkg -si
-makepkg -oi
-makepkg --skipinteg
-man yay
-nano /etc/makepkg.conf
-sudo nano /etc/makepkg.conf
-cp /etc/makepkg.conf ~/collate/etc/
-nano ~/scripts/install-patched-apps
-chmod +x ~/scripts/makepkg-prerun-wrapper
-sudo pacman -S customizepkg
-yay -S customizepkg
-yay --noeditmenu --nodiffmenu --save
-chezmoi add ~/scripts
-chezmoi add ~/.customizepkg/
-customizepkg
-nano /etc/customizepkg.d/
-ll /etc/customizepkg.d/
-yay -Rsn customizepkg-patching
-yay -Rsn customizepkg-git
-yay -S customizepkg-git
-pacman -Rsn customizepkg-git
-yay -S customizepkg-scripting
-yay -Rsn customizepkg-scripting
-sed -i 's/source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"/'
-sed -i 's/source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"/' PKGBUILD
-sed -i "s%source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g' PKGBUILD
-sed -i "s%source\s*=\s*([^)]*/source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD
-sed -i "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD
-sed "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD
-sed "s%source\s*=\s*([^)]*%source=(git+"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase" "https://github.com/ibhagwan/picom/pull/34.patch"%g" PKGBUILD | less
-sed "s%source\s*=\s*([^)]*%source=(git+\"https://github.com/ibhagwan/${_gitname}.git\#branch=next-rebase\" \"https://github.com/ibhagwan/picom/pull/34.patch\"%g" PKGBUILD | less
-yay --save --makepkg ${SCRIPTS}/makepkg-prerun-wrapper
-makepkg -g
-chezmoi add ~/scripts/
-chezmoi add ~/.config/yay/
-chezmoi add .config/autostart/variety.desktop
-chezmoi --help
-chezmoi apply --dry-run --keep-going
-chezmoi add .config/google-chrome/Default/
-chezmoi forget .config/google-chrome/
-nano .config/mimeapps.list
-chezmoi add .config/mimeapps.list
-chezmoi add .config/variety/
-chezmoi forget .config/variety
-chezmoi add .config/variety/Favorites/
-chezmoi add .config/variety/ui.conf
-chezmoi add .config/variety/variety
-chezmoi add .config/variety/variety.conf
-chezmoi apply --dry-run --keep-goin
-chezmoi add .fehbg
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/bookmarkbackups/
-chezmoi forget .mozilla/firefox/f8tyxumc.default-release/favicons.sqlite
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/places.sqlite
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/prefs
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/prefs.js
-chezmoi add .mozilla/firefox/f8tyxumc.default-release/storage.sqlite
-mkdir bruh
-archive-history -o bruh/
-ls bruh/
-ls -b bruh/
-ll bruh/
-mv bruh/.bash_history .bash_history
-rm -r bruh/
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth --status
+.config/polybar/launch.sh 
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+ll .config/rofi/
+ll .config/rofi/
+./.config/polybar/scripts/rofi-bluetooth
+cat /usr/bin/env
+cat /usr/bin/env | grep bash
+./.config/polybar/scripts/rofi-bluetooth
+cat /bin/env | grep bash
+cat /bin/env
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+echo -en "<span size='150%' rise='-1500'></span>\tRockerz 255 Pro+\n<span size='150%' rise='-1500'></span>\t01590d05\n<span size='150%' rise='-1500'></span>\tb9dec89d\n<span size='150%' rise='-1500'></span>\tJBL E25BT\n<span size='150%' rise='-1500'></span>\tJR_JioSTB-RFLSBLF82066137\n" | rofi -markup -markup-rows -theme "/home/utkarsh/.config/rofi/bluetooth-applet.rasi" -mesg "Status: NOT CONNECTED	Device: Not Available" -dmenu -selected-row 1
+dos2unix
+dos2unix
+echo -en "<span size='150%' rise='-1500'></span>\tRockerz 255 Pro+\n<span size='150%' rise='-1500'></span>\t01590d05\n<span size='150%' rise='-1500'></span>\tb9dec89d\n<span size='150%' rise='-1500'></span>\tJBL E25BT\n<span size='150%' rise='-1500'></span>\tJR_JioSTB-RFLSBLF82066137\n" | rofi -markup -markup-rows -theme "/home/utkarsh/.config/rofi/bluetooth-applet.rasi" -mesg "Status: NOT CONNECTED	Device: Not Available" -dmenu -selected-row 1
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+echo -en '"<span size='\''150%'\'' rise='\''-1500'\''></span>\tRockerz 255 Pro+\n<span size='\''150%'\'' rise='\''-1500'\''></span>\t01590d05\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tb9dec89d\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJBL E25BT\n<span size='\''150%'\'' rise='\''-1500'\''></span>\tJR_JioSTB-RFLSBLF82066137\n"'
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+.config/polybar/launch.sh 
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth --status
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+rofi -help
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl status
+bluetoothctl help
+bluetoothctl list
+bluetoothctl devices
+bluetoothctl power
+"$(bluetoothctl show | grep -q "Powered: yes")"
+$(bluetoothctl show | grep -q "Powered: yes")
+bluetoothctl show | grep -q "Powered: yes"
+bluetoothctl power
+bluetoothctl devices
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl
+bluetoothctl list
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+[[ "" ]]
+[[ "s" ]]
+[[ -z "s" ]]
+[[ ! -z "s" ]]
+[[ ! -z "s" ]]
+if [[ ! -z "s" ]]
+[[ "s" ]] && echo "yes" || echo "no"
+[[ "" ]] && echo "yes" || echo "no"
+"" && echo "yes" || echo "no"
+echo "" && echo "yes" || echo "no"
+[ "" ] && echo "yes" || echo "no"
+[ " " ] && echo "yes" || echo "no"
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+[200~echo "$(bluetoothctl show | grep -q "Powered: yes")"~
+echo "$(bluetoothctl show | grep -q "Powered: yes")"
+echo "$(bluetoothctl show | grep "Powered: yes")"
+echo "$(bluetoothctl show | grep "Powered: yes")" && echo "yes" || echo "no"
+echo "$(bluetoothctl show | grep -q "Powered: yes")" && echo "yes" || echo "no"
+echo "$(bluetoothctl show | grep -q "Powered: yes")" && echo "yes" || echo "no"
+bluetoothctl show | grep -q "Powered"
+bluetoothctl show 
+bluetoothctl power off
+echo "$(bluetoothctl show | grep -q "Powered: yes")" && echo "yes" || echo "no"
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show 
+bluetoothctl scan
+bluetoothctl scan le
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl show
+bluetoothctl show
+bluetoothctl discoverable on
+bluetoothctl discoverable off
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/launch.sh 
+./.config/polybar/launch.sh 
+./.config/polybar/launch.sh 
+./.config/polybar/launch.sh 
+./.config/polybar/launch.sh 
+./.config/polybar/launch.sh 
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g'
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d " " -f 2
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d " " -f 1
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $'\t' -f 1
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $'\t' -f 2
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $' ' -f 2
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $' ' -f 1
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $'\t' -f 1
+echo '<span size='\''150%'\'' rise='\''-1500'\''></span>	Rockerz 255 Pro+' | sed -e 's/<[^>]*>//g' | cut -d $'\t' -f 2
+./.config/polybar/scripts/rofi-bluetooth
+bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sed 's/.*/<span size="150%" rise="-1500"><\/span>\t&/'
+bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sed 's/.*/<span size="150%" rise="-1500"><\/span>\t&/'
+bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sed 's/.*/<span size="150%" rise="-1500"><\/span>\t&/' | | cut -d ' ' -f 3-
+bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sed 's/.*/<span size="150%" rise="-1500"><\/span>\t&/' | cut -d ' ' -f 3-
+bluetoothctl devices | grep Device | cut -d ' ' -f 3- | sed 's/.*/<span size="150%" rise="-1500"><\/span>\t&/' | cut -d ' ' -f 2
+bluetoothctl info "Rockerz 255 Pro+"
+bluetoothctl devices
+bluetoothctl devices | grep "Rockerz 255 Pro+" | xargs bluetooth info {} \;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | xargs bluetoothctl info {} \;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info {} \;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info "{}" \;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info '{}' \;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info {} ;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | bluetoothctl info;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info;
+bluetoothctl devices | grep "Rockerz 255 Pro+" | cut -d " " -f 2 | xargs bluetoothctl info
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+./.config/polybar/scripts/rofi-bluetooth
+cd ..
+chezmoi add .config/polybar.chirp/
+chezmoi add .config/wal/
+chezmoi add .config/rofi/
+chezmoi re-add
+note
+ls
+ls Notes/
+ll Notes/
+nano .bashrc 
+rm -r Notes/
+ls
+chezmoi diff
+chezmoi re-add
+chezmoi re-add
+.config/polybar/launch.sh 
+.config/polybar/scripts/rofi-netctl 
+htop
+rofi -theme .config/rofi/bluetooth-applet.rasi -dmenu
+rofiToggleWifiIcon="直" rofi -theme .config/rofi/bluetooth-applet.rasi -dmenu
+rofiToggleWifiIcon="直" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="直" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="ads" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="ads" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="\"直\" rofi -theme .config/rofi/network-applet.rasi -dmenu
+"
+rofiToggleWifiIcon="\"直\"" rofi -theme .config/rofi/network-applet.rasi -dmenu
+rofiToggleWifiIcon="\"直\"" rofi -theme .config/rofi/network-applet.rasi -dmenu
+htop
+export teststring='Hyper'
+echo $teststring
+export teststring='"Hyper"'
+echo $teststring
+. .config/polybar/scripts/rofi-bluetooth 
+chezmoi re-add
+mkdir tmp
+ls tmp/
+archive-history -o tmp/
+ls tmp/
+ll tmp/
+bspwmerr
+bsperr
+spicetify apply
+nano scripts/wal-static-server 
+spicetify apply

@@ -10,3 +10,5 @@
 	autocrlf = false
 [safe]
 	directory = /Development/MyProjects/Collate
+[init]
+	defaultBranch = master
