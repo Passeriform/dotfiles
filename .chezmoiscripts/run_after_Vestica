@@ -1,0 +1,6 @@
+#!/bin/bash
+
+THEME_PATH="${HOME}/.themes/Vestica"
+find "${THEME_PATH}" -not -path "${THEME_PATH}" -not -path '*Vestica/Vestica*' -delete
+mv "${THEME_PATH}/Vestica"/* "${THEME_PATH}" &> /dev/null
+rmdir "${THEME_PATH}/Vestica" &> /dev/null

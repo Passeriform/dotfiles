@@ -1,8 +1,11 @@
 [".themes/Kripton"]
-		type = "git-repo"
-    url = "https://github.com/EliverLara/Kripton.git"
+	type = "git-repo"
+	url = "https://github.com/EliverLara/Kripton.git"
+[".themes/Vestica"]
+	type = "git-repo"
+	url = "https://github.com/addy-dclxvi/gtk-theme-collections.git"
 [".bash_it"]
-		type = "git-repo"
-    url = "https://github.com/Bash-it/bash-it.git"
-		[".bash_it".pull]
-        args = ["--depth=1"]
+	type = "git-repo"
+	url = "https://github.com/Bash-it/bash-it.git"
+	[".bash_it".pull]
+		args = ["--depth=1"]

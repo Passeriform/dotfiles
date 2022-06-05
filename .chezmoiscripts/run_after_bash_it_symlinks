@@ -24,7 +24,6 @@ declare -a completions=(
 	"django"
 	"docker-compose"
 	"docker"
-	"flutter"
 	"gem"
 	"git_flow"
 	"git"
@@ -77,12 +76,16 @@ declare -a plugins=(
 	"xterm"
 )
 
+export BASH_IT="${HOME}/.bash_it"
+export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=0
+source "${BASH_IT_DIR}"/bash_it.sh
+
 for entry in "${aliases[@]}"; do
-	bash-it enable alias $entry
+	_enable-alias "$entry" &> /dev/null
 done
 for entry in "${completions[@]}"; do
-	bash-it enable completion $entry
+	_enable-completion "$entry" &> /dev/null
 done
 for entry in "${plugins[@]}"; do
-	bash-it enable plugin $entry
+	_enable-plugin "$entry" &> /dev/null
 done
