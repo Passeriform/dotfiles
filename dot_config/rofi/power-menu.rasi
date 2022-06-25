@@ -1,0 +1,67 @@
+@theme "./config.rasi"
+
+#window {
+	width: 45ch;
+}
+
+#mainbox {
+	children: [ box-options ];
+}
+
+#box-options {
+	expand: false;
+	orientation: horizontal;
+	spacing: 2ch;
+	margin: 3ch 4ch 3ch 4ch;
+	children: [ box-power-off, box-restart ];
+}
+
+#box-power-off {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-power-off-icon, button-power-off ];
+}
+
+#box-restart {
+	background-color: @color4;
+	border-radius: 5;
+	spacing: 1ch;
+	children: [ button-restart-icon, button-restart ];
+}
+
+#button-power-off-icon {
+	content: "襤";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 36";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-restart-icon {
+	content: "勒";
+	padding: 1ch;
+	font: "Fira Code Nerd Font Mono 36";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}
+
+#button-power-off {
+	content: "Power Off";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-1";
+}
+
+#button-restart {
+	content: "Restart";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	cursor: pointer;
+	action: "kb-custom-2";
+}

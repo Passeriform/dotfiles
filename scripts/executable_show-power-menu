@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+rofi -dmenu -config "${HOME}/.config/rofi/power-menu.rasi"
+
+case $? in
+	10)	shutdown -y ;;
+	11)	reboot ;;
+	1)	exit 0 ;;
+esac

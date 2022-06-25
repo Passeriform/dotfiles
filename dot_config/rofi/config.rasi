@@ -30,14 +30,14 @@ configuration {
 }
 
 #mainbox {
-	children: [message, inputbar, listview];
+	children: [ message, inputbar, listview ];
 }
 
 #inputbar {
 	padding: 4ch 5ch;
 	spacing: 2ch;
 	vertical-align: 0.5;
-	children: [textbox-prompt, entry, overlay, case-indicator];
+	children: [ textbox-prompt, entry, overlay, case-indicator ];
 }
 
 #textbox-prompt {
@@ -134,7 +134,7 @@ configuration {
 }
 
 #error-message {
-	children: [error-message-box];
+	children: [ error-message-box ];
 }
 
 #error-message-box {

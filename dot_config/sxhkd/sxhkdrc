@@ -130,6 +130,10 @@ super + ctrl + shift + alt + r
 # Xfce4-appfinder						#
 super + alt + f
     xfce4-appfinder						#
+
+# Display Power Menu						#
+ctrl + alt + Delete
+    "${SCRIPTS}/show-power-menu"				#
 								#
 ###########################################################################
 ###                                                                     ###

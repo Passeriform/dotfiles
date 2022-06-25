@@ -1,7 +1,7 @@
 @import "./config.rasi"
 
 #mainbox {
-	children: [message];
+	children: [ message ];
 }
 
 #message {
